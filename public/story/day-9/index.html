@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Day 9 | Lyli</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="11 : 29 am  People, we are back in business. I won&rsquo;t lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed newer version of Qt and uninstalled the old one, now things are look promising.
+ First off, I got some errors that the old one did show before.">
+<meta name="author" content="">
+<link rel="canonical" href="https://lyli.website/story/day-9/" />
+<link href="/assets/css/stylesheet.min.0226626d9e7f57c7b39f3e9601d07f0feb2da790abbc8e5918f430e98313b526.css" integrity="sha256-AiZibZ5/V8eznz6WAdB/D&#43;stp5CrvI5ZGPQw6YMTtSY=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://lyli.website/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lyli.website/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lyli.website/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lyli.website/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lyli.website/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.80.0" />
+
+
+<meta property="og:title" content="Day 9" />
+<meta property="og:description" content="11 : 29 am  People, we are back in business. I won&rsquo;t lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed newer version of Qt and uninstalled the old one, now things are look promising.
+ First off, I got some errors that the old one did show before." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lyli.website/story/day-9/" />
+<meta property="article:published_time" content="2020-12-08T11:29:51+00:00" />
+<meta property="article:modified_time" content="2020-12-08T11:29:51+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Day 9"/>
+<meta name="twitter:description" content="11 : 29 am  People, we are back in business. I won&rsquo;t lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed newer version of Qt and uninstalled the old one, now things are look promising.
+ First off, I got some errors that the old one did show before."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Stories",
+      "item": "https://lyli.website/story/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Day 9",
+      "item": "https://lyli.website/story/day-9/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Day 9",
+  "name": "Day 9",
+  "description": "11 : 29 am  People, we are back in business. I won\u0026amp;rsquo;t lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes …",
+  "keywords": [
+    
+  ],
+  "articleBody": "11 : 29 am  People, we are back in business. I won’t lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed newer version of Qt and uninstalled the old one, now things are look promising.\n First off, I got some errors that the old one did show before. I set a custom font for some UI widgets, the old one wasn’t showing the custom fonts but this one is.  Over the last few days I was wrestling with some bugs(errors in my code). First, it was communicating with the database, then signals were not being handled properly. Then I tried refactoring the code to make it more readable: that too created some more problems, so I had to reverse the changes. Finally I was thinking about changing the version of Qt or using C++ or Golang.\nProgramming is like writing an book. When you write a book, someone else can read it. When you write a program you produce a code(instructions). A program can read your code to create another program that does something. Or a program can read your code to simply do something.\nYou can write an essay in English, French or some other language. In the same way there are different languages for writing code. C++, Golang are programming languages.\nQt is C++ with some added features. Qt is also the name of a software, that allows you to write C++ with those added Qt features. This makes Qt is a framework for C++. Because it’s adds to the standard C++ but the underlying rules of C++ still apply.\nFingers crossed. Hopefully, by end of day, I will be done.\nSomething fun or something to ignore, whichever you choose you can’t be wrong: 011404 09 130125 1903151805 01 04012005. If you can decode this. I will tell you about it. Email: ghuywithissues@gmail.com. Cyrus knows the key btw. Cyrus AKA @cyrusgooddays the musician.\n12 : 00 pm  I’m looking at some outputs, it is incredible.\n12 : 42 pm  I’m glad to announce after some few bug fixes the code is running. Now I have to create some test sandbox and make sure it works. What next is, add icon, check the UI. Even though the components are running in a different threads the UI is still freezing: I have to check that. Once I’m done, I will make my big announcement to anyone who may be concerned that the app is useable.\n\r.story-problem {\rpadding: 15px;\rmargin: 15px auto;\rbackground-color: rgba(145, 24, 24, 0.39);\r}\r.story-problem-title {\rfont-size: 2rem;\r}\r\rProblem\r\rComponents are in different threads but, UI is still freezing. \r 3 : 14 pm  Solved the UI freezing problem. Basically, I pile up the updates to UI and push them to UI at my own time. So, updates are pushed to UI in an interval of: 100ms (for now). The updates are just to show the user that the program is doing something. So, when it actually appears doesn’t really count as long as it’s reasonable.\n5 : 8 pm  Let me tell you guys about the problem with the signals and slots. In the process of adjusting the code to work, I made some mistakes I didn’t even know I was making. The rule is if you want to send a signal that is complex. You have to register it before hand. I grouped some pieces of information to be sent as part of one signal making it complex. I didn’t know I had to register it after that, and that caused the problem.\nIn the early days I compared signals and slots to oranges and baskets. Sending signals to slots is like putting oranges into a basket. Once the signals get to the slots the program does something with them. A signal can be anything. It can be single piece of information or a lot information grouped together. To compare it to fruits again: it can be a single orange or bunch of oranges mixed with apples and berries. The error was the system telling me: it does not see the signals I was sending, simple; so, I should register them.\nCode for registering the type:\n  I just came back home about an hour ago.\nI’m about to make an Icon for the app. At the office I started the process. I wrote .lyli on a piece of paper and took a picture. Now, I’m about to push the picture through an Icon maker app I downloaded via windows store.\n« Prev Page Next Page » \r",
+  "wordCount" : "780",
+  "inLanguage": "en",
+  "datePublished": "2020-12-08T11:29:51Z",
+  "dateModified": "2020-12-08T11:29:51Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lyli.website/story/day-9/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lyli",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lyli.website/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
+<script data-ad-client="ca-pub-4771693215081441" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0K7SW0WREY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0K7SW0WREY');
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lyli.website/" accesskey="h" title="Lyli (Alt + H)">Lyli</a>
+            
+        </div> <br>
+        <ul id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://lyli.website/story/" title="Story">
+                    <span>Story</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://lyli.website/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+
+    <h1 class="post-title">
+      Day 9
+    </h1>
+    <div class="post-meta">December 8, 2020
+
+</div>
+  </header> 
+
+  <div class="post-content">
+<div class="story-time post-meta">  11 : 29 am </div>
+<p>People, we are back in business. I won&rsquo;t lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed newer version of Qt and uninstalled the old one, now things are look promising.</p>
+<ul>
+<li>First off, I got some errors that the old one did show before.</li>
+<li>I set a custom font for some UI widgets, the old one wasn&rsquo;t showing the custom fonts but this one is.</li>
+</ul>
+<p>Over the last few days I was wrestling with some bugs(errors in my code). First, it was communicating with the database, then <code>signals</code> were not being handled properly. Then I tried refactoring the code to make it more readable: that too created some more problems, so I had to reverse the changes. Finally I was thinking about changing the version of Qt or using C++ or Golang.</p>
+<p>Programming is like writing an book. When you write a book, someone else can read it. When you write a program you produce a code(instructions). A program can read your code to create another program that does something. Or a program can read your code to simply do something.</p>
+<p>You can write an essay in English, French or some other language. In the same way there are different languages for writing code. C++, Golang are programming languages.</p>
+<p>Qt is C++ with some added features. Qt is also the name of a software, that allows you to write C++ with those added Qt features. This makes Qt is a framework for C++. Because it&rsquo;s adds to the standard C++ but the underlying rules of C++ still apply.</p>
+<p>Fingers crossed. Hopefully, by end of day, I will be done.</p>
+<p>Something fun or something to ignore, whichever you choose you can&rsquo;t be wrong: 011404 09 130125 1903151805 01 04012005.  If you can decode this. I will tell you about it. Email: <a href="mailto:ghuywithissues@gmail.com">ghuywithissues@gmail.com</a>. Cyrus knows the key btw. Cyrus AKA @cyrusgooddays the musician.</p>
+<div class="story-time post-meta">  12 : 00 pm </div>
+<p>I&rsquo;m looking at some outputs, it is incredible.</p>
+<div class="story-time post-meta">  12 : 42 pm </div>
+<p>I&rsquo;m glad to announce after some few bug fixes the code is running. Now I have to create some test sandbox and make sure it works. What next is, add icon, check the UI. Even though the components are running in a different threads the UI is still freezing: I have to check that. Once I&rsquo;m done, I will make my big announcement to anyone who may be concerned that the app is useable.</p>
+<style>
+    .story-problem {
+        padding: 15px;
+        margin: 15px auto;
+        background-color: rgba(145, 24, 24, 0.39);
+    }
+
+    .story-problem-title {
+        font-size: 2rem;
+         
+         
+         
+    }
+
+     
+         
+         
+         
+     
+</style>
+
+<div class="story-problem">
+    <div class="story-problem-title">
+        Problem
+    </div>
+    <div class="story-problem-statement">
+         Components are in different threads but, UI is still freezing. 
+    </div>
+</div>
+<div class="story-time post-meta">  3 : 14 pm </div>
+<p>Solved the UI freezing problem. Basically, I pile up the updates to UI and push them to UI at my own time. So, updates are pushed to UI in an interval of: 100ms (for now). The updates are just to show the user that the program is doing something. So, when it actually appears doesn&rsquo;t really count as long as it’s reasonable.</p>
+<div class="story-time post-meta">  5 : 8 pm </div>
+<p>Let me tell you guys about the problem with the <code>signals</code> and <code>slots</code>. In the process of adjusting the code to work, I made some mistakes I didn&rsquo;t even know I was making. The rule is if you want to send a signal that is complex. You have to register it before hand. I grouped some pieces of information to be sent as part of one <code>signal</code> making it complex. I didn&rsquo;t know I had to register it after that, and that caused the problem.</p>
+<p>In the early days I compared <code>signals</code> and <code>slots</code> to oranges and baskets. Sending <code>signals</code> to <code>slots</code> is like putting oranges into a basket. Once the <code>signals</code> get to the <code>slots</code> the program does something with them. A signal can be anything. It can be single piece of information or a lot information grouped together. To compare it to fruits again: it can be a single orange or bunch of oranges mixed with apples and berries. The error was the system telling me: it does not see the <code>signals</code> I was sending, simple; so, I should register them.</p>
+<p>Code for registering the type:</p>
+<script type="application/javascript" src="https://gist.github.com/nelsonsaake/668154b9ed78c33847e4d4e82f7ee71f.js"></script>
+
+<h1 id="heading"><a hidden class="anchor" aria-hidden="true" href="#heading">#</a></h1>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>I just came back home about an hour ago.</p>
+<p>I&rsquo;m about to make an Icon for the app. At the office I started the process. I wrote .lyli on a piece of paper and took a picture. Now, I&rsquo;m about to push the picture through an Icon maker app I downloaded via windows store.</p>
+
+
+<nav class="pagination" style="padding: 50px 0;">
+     <a class="prev" href='/story/day-8/'>« Prev Page</a> 
+     <a class="next" href='/story/day-10/'>Next Page »</a> 
+</nav>
+
+
+
+</div>
+
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2022 <a href="https://lyli.website/">Lyli</a></span>
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

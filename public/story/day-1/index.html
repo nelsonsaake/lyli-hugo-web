@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Day 1 | Lyli</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="To put this thing together I need a plan, and some tools. Just as constructor needs a drawing and some machines.
+I have some ideas about how it going to like like in the end, how the database should be structure. The idea is not solid. It&rsquo;s not definite but it can get me started. I will use SQLite as my database. I have some drawings of how the database should look like. I will programming C&#43;&#43; and I will be using Qt.">
+<meta name="author" content="">
+<link rel="canonical" href="https://lyli.website/story/day-1/" />
+<link href="/assets/css/stylesheet.min.0226626d9e7f57c7b39f3e9601d07f0feb2da790abbc8e5918f430e98313b526.css" integrity="sha256-AiZibZ5/V8eznz6WAdB/D&#43;stp5CrvI5ZGPQw6YMTtSY=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://lyli.website/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lyli.website/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lyli.website/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lyli.website/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lyli.website/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.80.0" />
+
+
+<meta property="og:title" content="Day 1" />
+<meta property="og:description" content="To put this thing together I need a plan, and some tools. Just as constructor needs a drawing and some machines.
+I have some ideas about how it going to like like in the end, how the database should be structure. The idea is not solid. It&rsquo;s not definite but it can get me started. I will use SQLite as my database. I have some drawings of how the database should look like. I will programming C&#43;&#43; and I will be using Qt." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lyli.website/story/day-1/" />
+<meta property="article:published_time" content="2020-11-30T08:00:51+00:00" />
+<meta property="article:modified_time" content="2020-11-30T08:00:51+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Day 1"/>
+<meta name="twitter:description" content="To put this thing together I need a plan, and some tools. Just as constructor needs a drawing and some machines.
+I have some ideas about how it going to like like in the end, how the database should be structure. The idea is not solid. It&rsquo;s not definite but it can get me started. I will use SQLite as my database. I have some drawings of how the database should look like. I will programming C&#43;&#43; and I will be using Qt."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Stories",
+      "item": "https://lyli.website/story/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Day 1",
+      "item": "https://lyli.website/story/day-1/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Day 1",
+  "name": "Day 1",
+  "description": "To put this thing together I need a plan, and some tools. Just as constructor needs a drawing and some machines.\nI have some ideas about how it going to like like in the end, how …",
+  "keywords": [
+    
+  ],
+  "articleBody": "To put this thing together I need a plan, and some tools. Just as constructor needs a drawing and some machines.\nI have some ideas about how it going to like like in the end, how the database should be structure. The idea is not solid. It’s not definite but it can get me started. I will use SQLite as my database. I have some drawings of how the database should look like. I will programming C++ and I will be using Qt.\nSQLite because it’s small and suit my needs, C++ and Qt because I want to build a program for a computer that has GUI.GUI is that part of the program with buttons, colors, picture, animations,…and basically anything you can interact with.\nI actually started thinking about how I was going to go about it since Wednesday. I also watched some videos on SQLite and Qt, and read a bit about C++ multithreading (doing many thing in a program at once).\n8 : 1 am  I’ve started, I want to download the SQLite DBMS to make my database schema(design or blueprint) before adding the file to the rest of the program. DBMS means database management system, it like VLC for database file. It allow you to design you database and fill it with data.\n\r.story-problem {\rpadding: 15px;\rmargin: 15px auto;\rbackground-color: rgba(145, 24, 24, 0.39);\r}\r.story-problem-title {\rfont-size: 2rem;\r}\r\rProblem\r\rThe DBMS I want is not the official SQLite site. I will have to search for it. \r 8 : 32 am  Found the SQLite DBMS I was looking for, turns out it is a third-party tool called SQLite studio. URL: https://github.com/pawelsalawa/sqlitestudio/releases/download/3.2.1/InstallSQLiteStudio-3.2.1.exe\n10 : 17 am  I have just created the schema and added to my program in a folder assets/database.\n10 : 34 am  I having being to trying to push the project to GitHub and I have been failing, will try again later. At this point is vital to note that I’m not working on this straight. I’m at work, so coding in between tasks.\n1 : 27 pm  Between the last entry and now, I have had the chance to look at the Qt SQL examples and I’m confident and ready to go forward. The examples are found online, on the Qt documentation web site. Qt has a great documentation, that’s just by the way.\n4 : 52 pm  Jim Wilson: Managing Android App Data with SQLite. It is the Android tutorial on Pluralsight. It is about four hours, very good tutorial. I watched(recently). Following the videos I implemented the database contract class. The contract class(es) help you formalize talking to the database.\nA shoutout to GADS20 100DAYSOFGADS20, the Google Africa Developer Scholarship program. That’s how got access to the Pluralsight videos.\nI also went ahead to create two widgets to reflect the databases in the application. Then I got an error trying to run the application. The message is as follows:\n\r.story-problem {\rpadding: 15px;\rmargin: 15px auto;\rbackground-color: rgba(145, 24, 24, 0.39);\r}\r.story-problem-title {\rfont-size: 2rem;\r}\r\rProblem\r\rQWidget: Must construct a QApplication before a QWidget \r Don’t worry if you don’t understand, I don’t either. I will google it to find the solution.\n« Prev Page Next Page » ",
+  "wordCount" : "539",
+  "inLanguage": "en",
+  "datePublished": "2020-11-30T08:00:51Z",
+  "dateModified": "2020-11-30T08:00:51Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lyli.website/story/day-1/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lyli",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lyli.website/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
+<script data-ad-client="ca-pub-4771693215081441" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0K7SW0WREY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0K7SW0WREY');
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lyli.website/" accesskey="h" title="Lyli (Alt + H)">Lyli</a>
+            
+        </div> <br>
+        <ul id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://lyli.website/story/" title="Story">
+                    <span>Story</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://lyli.website/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+
+    <h1 class="post-title">
+      Day 1
+    </h1>
+    <div class="post-meta">November 30, 2020
+
+</div>
+  </header> 
+
+  <div class="post-content">
+<p>To put this thing together I need a plan, and some tools. Just as constructor needs a drawing and some machines.</p>
+<p>I have some ideas about how it going to like like in the end, how the database should be structure. The idea is not solid. It&rsquo;s not definite but it can get me started. I will use SQLite as my database. I have some drawings of how the database should look like. I will programming C++ and I will be using Qt.</p>
+<p>SQLite because it&rsquo;s small and suit my needs, C++ and Qt because I want to build a program for a computer that has GUI.GUI is that part of the program with buttons, colors, picture, animations,&hellip;and basically anything you can interact with.</p>
+<p>I actually started thinking about how I was going to go about it since Wednesday. I also watched some videos on SQLite and Qt, and read a bit about C++ multithreading (doing many thing in a program at once).</p>
+<div class="story-time post-meta">  8 : 1 am </div>
+<p>I&rsquo;ve started, I want to download the SQLite <code>DBMS</code> to make my database schema(design or blueprint) before adding the file to the rest of the program.  <code>DBMS</code> means database management system, it like <code>VLC</code> for database file. It allow you to design you database and fill it with data.</p>
+<style>
+    .story-problem {
+        padding: 15px;
+        margin: 15px auto;
+        background-color: rgba(145, 24, 24, 0.39);
+    }
+
+    .story-problem-title {
+        font-size: 2rem;
+         
+         
+         
+    }
+
+     
+         
+         
+         
+     
+</style>
+
+<div class="story-problem">
+    <div class="story-problem-title">
+        Problem
+    </div>
+    <div class="story-problem-statement">
+         The DBMS I want is not the official SQLite site. I will have to search for it. 
+    </div>
+</div>
+<div class="story-time post-meta">  8 : 32 am </div>
+<p>Found the SQLite DBMS I was looking for, turns out it is a third-party tool called SQLite studio.
+URL: <a href="https://github.com/pawelsalawa/sqlitestudio/releases/download/3.2.1/InstallSQLiteStudio-3.2.1.exe">https://github.com/pawelsalawa/sqlitestudio/releases/download/3.2.1/InstallSQLiteStudio-3.2.1.exe</a></p>
+<div class="story-time post-meta">  10 : 17 am </div>
+<p>I have just created the schema and added to my program in a folder <code>assets/database</code>.</p>
+<div class="story-time post-meta">  10 : 34 am </div>
+<p>I having being to trying to push the project to GitHub and I have been failing, will try again later.
+At this point is vital to note that I&rsquo;m not working on this straight. I&rsquo;m at work, so coding in between tasks.</p>
+<div class="story-time post-meta">  1 : 27 pm </div>
+<p>Between the last entry and now, I have had the chance to look at the Qt SQL examples and I&rsquo;m confident and ready to go forward. The examples are found online, on the Qt documentation web site. Qt has a great documentation, that’s just by the way.</p>
+<div class="story-time post-meta">  4 : 52 pm </div>
+<p>Jim Wilson: Managing Android App Data with SQLite. It is the Android tutorial on Pluralsight. It is about four hours, very good tutorial. I watched(recently). Following the videos I implemented the database contract class. The contract class(es) help you formalize talking to the database.</p>
+<p>A shoutout to <strong>GADS20</strong> <strong>100DAYSOFGADS20</strong>, the Google Africa Developer Scholarship program. That&rsquo;s how got access to the Pluralsight videos.</p>
+<p>I also went ahead to create two widgets to reflect the databases in the application. Then I got an error trying to run the application. The message is as follows:</p>
+<style>
+    .story-problem {
+        padding: 15px;
+        margin: 15px auto;
+        background-color: rgba(145, 24, 24, 0.39);
+    }
+
+    .story-problem-title {
+        font-size: 2rem;
+         
+         
+         
+    }
+
+     
+         
+         
+         
+     
+</style>
+
+<div class="story-problem">
+    <div class="story-problem-title">
+        Problem
+    </div>
+    <div class="story-problem-statement">
+          QWidget: Must construct a QApplication before a QWidget 
+    </div>
+</div>
+<p>Don&rsquo;t worry if you don&rsquo;t understand, I don&rsquo;t either. I will google it to find the solution.</p>
+
+
+<nav class="pagination" style="padding: 50px 0;">
+     <a class="prev" href='/story/day-1-intro/'>« Prev Page</a> 
+     <a class="next" href='/story/day-2/'>Next Page »</a> 
+</nav>
+</div>
+
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2022 <a href="https://lyli.website/">Lyli</a></span>
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

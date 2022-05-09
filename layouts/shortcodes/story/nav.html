@@ -1,0 +1,8 @@
+{{ if or (.Get "prev") (.Get "next")}}
+
+<nav class="pagination" style="padding: 50px 0;">
+    {{ if .Get "prev"}} <a class="prev" href='/story/{{ .Get "prev" }}/'>« Prev Page</a> {{end}}
+    {{ if .Get "next"}} <a class="next" href='/story/{{ .Get "next" }}/'>Next Page »</a> {{end}}
+</nav>
+
+{{end}}

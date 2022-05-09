@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Day 2 | Lyli</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="  9 : 19 am 
+I found the solution to the yesterdays error. All I had to do was interchange the order of some lines of code. Somethings need to happen before can happen others. A similar scenario in this case is: you need to have table in order to put a plate on a table.">
+<meta name="author" content="">
+<link rel="canonical" href="https://lyli.website/story/day-2/" />
+<link href="/assets/css/stylesheet.min.0226626d9e7f57c7b39f3e9601d07f0feb2da790abbc8e5918f430e98313b526.css" integrity="sha256-AiZibZ5/V8eznz6WAdB/D&#43;stp5CrvI5ZGPQw6YMTtSY=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://lyli.website/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lyli.website/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lyli.website/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lyli.website/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lyli.website/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.80.0" />
+
+
+<meta property="og:title" content="Day 2" />
+<meta property="og:description" content="  9 : 19 am 
+I found the solution to the yesterdays error. All I had to do was interchange the order of some lines of code. Somethings need to happen before can happen others. A similar scenario in this case is: you need to have table in order to put a plate on a table." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lyli.website/story/day-2/" />
+<meta property="article:published_time" content="2020-12-01T09:19:56+00:00" />
+<meta property="article:modified_time" content="2020-12-01T09:19:56+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Day 2"/>
+<meta name="twitter:description" content="  9 : 19 am 
+I found the solution to the yesterdays error. All I had to do was interchange the order of some lines of code. Somethings need to happen before can happen others. A similar scenario in this case is: you need to have table in order to put a plate on a table."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Stories",
+      "item": "https://lyli.website/story/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Day 2",
+      "item": "https://lyli.website/story/day-2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Day 2",
+  "name": "Day 2",
+  "description": "9 : 19 am  I found the solution to the yesterdays error. All I had to do was interchange the order of some lines of code. Somethings need to happen before can happen others. A …",
+  "keywords": [
+    
+  ],
+  "articleBody": "9 : 19 am  I found the solution to the yesterdays error. All I had to do was interchange the order of some lines of code. Somethings need to happen before can happen others. A similar scenario in this case is: you need to have table in order to put a plate on a table.\nTo be technical about, if a piece of code that will create any widget or UI element; the code must be executed after the QApplication is executed. It might slip through sometimes because, the offending code might be doing so indirectly.\n\r.story-problem {\rpadding: 15px;\rmargin: 15px auto;\rbackground-color: rgba(145, 24, 24, 0.39);\r}\r.story-problem-title {\rfont-size: 2rem;\r}\r\rProblem\r\rI encountered another problem. Somehow insert data into the database is not working, can't find the cause(or the reason). \r I’ve been on this one since yesterday evening around 6:00pm. Slept woke up, keep coming back to the code, referring to the example codes in the Qt online documentation and still I’m getting nowhere. And by the way, I arrived at work about 7:29am. 7:29am because that’s when I signed in.\n12 : 51 pm  I found the solution to the error. I can’t tell what it was, because I don’t even know. After refactoring(changing) the code for bit. It just started working.\nNow, I’m trying to simulate continuous entry of data. So, say: the program is continuously supplying data to the database. I want to see how the app will handle displaying it. I have gotten past the entry part, it’s now left with the display part.\n\r.story-problem {\rpadding: 15px;\rmargin: 15px auto;\rbackground-color: rgba(145, 24, 24, 0.39);\r}\r.story-problem-title {\rfont-size: 2rem;\r}\r\rProblem\r\rSo far, displaying database updates in the UI is not working. It's almost as if it is blocked by the how fast the entry is occurring. And, I don't get it because the continuous entry part of the thing is in a different thread, this way the program should be able to do both of them the same time. \r I have to go do some research on this issue.\n3 : 20 pm  So, I learnt the proper way of dealing with threads in Qt: use signals and slots. That is, when using the QThreads, and you want objects on different threads to communicate, let them inherit QObject and use signals and slots to communicate.\nIt is like this: the signals are updates being put into a basket which is the slots. When ever something gets into the basket, the program will deal with it. In this case display on the screen. signals and slots will be on different QThreads, which means one doesn’t have to wait for the other.\nWhat I was doing was that was causing the error is this:\n 5 : 50 pm  Recap: the best way for QObjects on different threads to communicate in Qt is: use QThread. Let them communicate using signals and slots. This way Qt makes sure the functions are called in their own thread.\nOne way to think of threads is to imagine them as car lanes on a highway. Functions being called in different threads: will be like cars in different lanes. One will not interfere with the other, but the can communicate. If there is a take-away from the 3:20pm section, this is it.\nAll this dealing with errors reminds me of The Bjarne Stroustrup, All Salute; to Rob Pike, my respects. Two of the few champions for error handling. At least those I know.\nBy the way, I just got home from work.\n« Prev Page Next Page » ",
+  "wordCount" : "601",
+  "inLanguage": "en",
+  "datePublished": "2020-12-01T09:19:56Z",
+  "dateModified": "2020-12-01T09:19:56Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lyli.website/story/day-2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lyli",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lyli.website/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
+<script data-ad-client="ca-pub-4771693215081441" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0K7SW0WREY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0K7SW0WREY');
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lyli.website/" accesskey="h" title="Lyli (Alt + H)">Lyli</a>
+            
+        </div> <br>
+        <ul id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://lyli.website/story/" title="Story">
+                    <span>Story</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://lyli.website/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+
+    <h1 class="post-title">
+      Day 2
+    </h1>
+    <div class="post-meta">December 1, 2020
+
+</div>
+  </header> 
+
+  <div class="post-content">
+<div class="story-time post-meta">  9 : 19 am </div>
+<p>I found the solution to the yesterdays error. All I had to do was interchange the order of some lines of code. Somethings need to happen before can happen others. A similar scenario in this case is: you need to have table in order to put a plate on a table.</p>
+<p>To be technical about, if a piece of code that will create any widget or UI element; the code must be executed after the QApplication is executed. It might slip through sometimes because, the offending code might be doing so indirectly.</p>
+<style>
+    .story-problem {
+        padding: 15px;
+        margin: 15px auto;
+        background-color: rgba(145, 24, 24, 0.39);
+    }
+
+    .story-problem-title {
+        font-size: 2rem;
+         
+         
+         
+    }
+
+     
+         
+         
+         
+     
+</style>
+
+<div class="story-problem">
+    <div class="story-problem-title">
+        Problem
+    </div>
+    <div class="story-problem-statement">
+         I encountered another problem. Somehow insert data into the database is not working, can't find the cause(or the reason). 
+    </div>
+</div>
+<p>I&rsquo;ve been on this one since yesterday evening around 6:00pm. Slept woke up, keep coming back to the code, referring to the example codes in the Qt online documentation and still I&rsquo;m getting nowhere.
+And by the way, I arrived at work about 7:29am. 7:29am because that&rsquo;s when I signed in.</p>
+<div class="story-time post-meta">  12 : 51 pm </div>
+<p>I found the solution to the error. I can&rsquo;t tell what it was, because I don&rsquo;t even know. After refactoring(changing) the code for bit. It just started working.</p>
+<p>Now, I’m trying to simulate continuous entry of data. So, say: the program is continuously supplying data to the database. I want to see how the app will handle displaying it. I have gotten past the entry part, it&rsquo;s now left with the display part.</p>
+<style>
+    .story-problem {
+        padding: 15px;
+        margin: 15px auto;
+        background-color: rgba(145, 24, 24, 0.39);
+    }
+
+    .story-problem-title {
+        font-size: 2rem;
+         
+         
+         
+    }
+
+     
+         
+         
+         
+     
+</style>
+
+<div class="story-problem">
+    <div class="story-problem-title">
+        Problem
+    </div>
+    <div class="story-problem-statement">
+         So far, displaying database updates in the UI is not working. It's almost as if it is blocked by the how fast the entry is occurring. And, I don't get it because the continuous entry part of the thing is in a different thread, this way the program should be able to do both of them the same time. 
+    </div>
+</div>
+<p>I have to go do some research on this issue.</p>
+<div class="story-time post-meta">  3 : 20 pm </div>
+<p>So, I learnt the proper way of dealing with threads in Qt: use signals and slots. That is, when using the QThreads, and you want objects on different threads to communicate, let them inherit QObject and use signals and slots to communicate.</p>
+<p>It is like this: the <code>signals</code> are updates being put into a basket which is the <code>slots</code>. When ever something gets into the basket, the program will deal with it. In this case display on the screen. <code>signals</code> and <code>slots</code> will be on different QThreads, which means one doesn&rsquo;t have to wait for the other.</p>
+<p>What I was doing was that was causing the error is this:</p>
+<script type="application/javascript" src="https://gist.github.com/nelsonsaake/4b041abe62166ff1b5f1d2b4a40beade.js"></script>
+
+<div class="story-time post-meta">  5 : 50 pm </div>
+<p>Recap: the best way for QObjects on different threads to communicate in Qt is: use QThread. Let them communicate using signals and slots. This way Qt makes sure the functions are called in their own thread.</p>
+<p>One way to think of threads is to imagine them as car lanes on a highway. Functions being called in different threads: will be like cars in different lanes. One will not interfere with the other, but the can communicate. If there is a take-away from the 3:20pm section, this is it.</p>
+<p>All this dealing with errors reminds me of The Bjarne Stroustrup, All Salute; to Rob Pike, my respects. Two of the few champions for error handling. At least those I know.</p>
+<p>By the way, I just got home from work.</p>
+
+
+<nav class="pagination" style="padding: 50px 0;">
+     <a class="prev" href='/story/day-1/'>« Prev Page</a> 
+     <a class="next" href='/story/day-3/'>Next Page »</a> 
+</nav>
+</div>
+
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>&copy; 2022 <a href="https://lyli.website/">Lyli</a></span>
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+
+
+<script defer src="/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

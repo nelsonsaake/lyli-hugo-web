@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+
+.main {
+    position: relative;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin: auto;
+    padding: var(--gap);
+    font-family: var(--font-family);
+}
+
+.page-header h1 {
+    font-size: 45px
+}
+
+.pagination {
+    display: flex
+}
+
+.pagination a {
+    color: var(--theme);
+    font-size: 18px;
+    line-height: 36px;
+    background: var(--primary);
+    border-radius: calc(36px / 2);
+    padding: 0 16px
+}
+
+.pagination .next {
+    margin-inline-start: auto
+}
+
+.social-icons {
+    padding: 12px 0
+}
+
+.social-icons a:not(:last-of-type) {
+    margin-inline-end: 12px
+}
+
+.social-icons a svg {
+    height: 26px;
+    width: 26px
+}
+
+code {
+    direction: ltr
+}
+
+/*   my own css */
+
+.entry-content a {
+    color: cornflowerblue;
+    padding: 2px 15px;
+    border: 1px solid cornflowerblue;
+    border-width: 1px 4px;
+    border-radius: 15px;
+}
+
+.entry-content a:hover {
+    letter-spacing: 2px;
+    margin-left: 3px;
+}
+
+.nav a {
+    margin: 0px 2px;
+    font-weight: bold;
+}
+
+.nav a .active {
+    letter-spacing: 1px;
+}
+
+.entry-header, img {
+    margin: 15px 0;
+}

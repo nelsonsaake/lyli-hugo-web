@@ -1,0 +1,730 @@
+WHILE BUILDING THE RENAME EXTENSIONS APP
+
+Target Builder is another name for Folder Scanner
+
+- 30/11/2020
+
+By this time, I have concept of what I'm going to be building.
+
+I have a vague UI in mind, it keeps changing but all is cool.
+
+I have a database (DB) structure in mind.
+
+I intend to use SQLite.
+
+The DB structure is actually sketched.
+
+Now, the thing is I'm practically starting from scratch here.
+
+I started around Wednesday, the conceptualizing and all.
+
+I've read a bit; watched a couple of videos on the SQLite with qt.
+
+and qt C++ multithreading.
+
+8:01 am
+
+I've started, I want to download the UI SQLite tool to make my database
+schema before adding the file to the app.
+
+\# problem
+
+the DB UI is not the official SQLite site. I will have to search for it.
+
+8:32 am
+
+Found the SQLite GUI tool I was looking for turns out it is a
+third-party tool called SQLite studio.
+
+URL:
+*https://github.com/pawelsalawa/sqlitestudio/releases/download/3.2.1/InstallSQLiteStudio-3.2.1.exe*
+
+10:17 am
+
+Schema created and included in assets/database.
+
+10:34 am
+
+Attempted continuously to add the project to GitHub and continuously
+failed,
+
+will try again later.
+
+At this point is vital to note that I'm not working on this straight.
+I'm at work, so coding in between tasks.
+
+1:27 pm
+
+Between the last entry and now, I have taken a glance at the Qt SQL
+examples and I'm confident and ready to go forward. The examples are
+found online on the Qt documentation site. Qt has a great documentation,
+that’s just by the way.
+
+4:52 pm
+
+I borrowed the android concept of database contract class and
+implemented it. Borrowed as in the only other place I saw this is the
+Android tutorial on Pluralsight, By Jim Wilson: Managing Android App
+Data with SQLite.
+
+It is about four hours. If you can’t code along, I recommend you at
+least watch it like some interesting movie series. Then you can refer to
+it when-ever you like, to pick that info that interests you. Even though
+it is loaded with information;
+
+I would be doing you a great dis-service if I don't mention it is a
+tutorial video, so, it can easily get boring. \#GADS20 \#100DAYSOFGADS20
+
+I also went ahead to create two widgets to reflect the databases in the
+application another error hits.
+
+\# problem
+
+QWidget: Must construct a QApplication before a QWidget
+
+- 1/12/2020
+
+9:19 am
+
+I found the solution to the error. All had to do was interchange the
+order of some lines of code in the main.
+
+Basically, if a piece of code that will create any widget or UI element;
+the code must be executed after the QApplication is executed.
+
+It might slip through sometimes because, the offending code might be
+doing so indirectly.
+
+\# problem
+
+I encountered another problem. Somehow insert data into the database is
+not working, can't find the problem.
+
+I've been on this one since yesterday evening around 6:00pm. Slept woke
+up, keep coming back to the code, referring to the example codes in the
+Qt online documentation and still I'm getting nowhere.
+
+And by the way, I arrived at work about 7:29am. You I said 7:29am
+because that's when I signed in.
+
+12:51 pm
+
+I found the solution to the error. I can't tell what it was, because I
+don't even know. After refactoring the code for bit. It just started
+working.
+
+Now, I’m trying to simulate continuous entry of data. So, say: the
+program is continuously supplying data to the database.
+
+I want to see how the app will handle displaying it. I have gotten past
+the continuous entry part. It now left with the display part.
+
+\# problem
+
+So far, display the database updates in the UI is not working. It almost
+as if it blocked by the continuous entry. And, I don't get it because
+the continuous entry part of the thing is in a different thread.
+
+3:20 pm
+
+So, I learnt the proper way of dealing with threads in Qt is to use
+signals and slots. That is, when using the QThreads, and you want
+objects on different thread to communicate, let them inherit QObject and
+use signals and slots to communicate.
+
+It’s like the async key word in other languages. When using signals and
+slots to communicate between objects, when a signal is emitted it
+schedules a call to all the slots. In summary, it makes things simpler
+and easier.
+
+What I was doing was:
+
+// move the class to thread
+
+someObjectClass.moveToThread(&newThread);
+
+// start the thread
+
+newThread.start();
+
+// where resource intensive work will be done
+
+// this would run the someObjectClass in the
+
+// current thread not newThread
+
+someObjectClass.doWork();
+
+5:50 pm
+
+Recap: the best way for objects on different threads to communicate in
+Qt is using QThread: is using signals and slots.
+
+It takes cares of making sure the functions are called in their own
+thread. If there is a take-away from the 3:20pm section, this is it. I'm
+talking in the context of Qt here.
+
+All this dealing with errors reminds me of The Bjarne Stroustrup. All
+Salute. And to Rob Pike, my respects. Two of the few champions for error
+handling. At least those I know.
+
+By the way, I just got home from work.
+
+- 2/12/2020
+
+8:23 am
+
+After my last entry yesterday, I started to doze off. I guess I was
+tired and I did even know it. I was really surprised. But I went to bed
+later in the evening. Today is a new day, hopefully no new errors :).
+
+I'm already at work.
+
+10:07 am
+
+I'm going back to the drawing board. For the first time, I have to think
+about the structure of the code. Considering in my calculations the use
+of signals and slots.
+
+Ideally, I would like every single query be executed in a different
+thread. But this is very expensive. And since they will all be trying to
+access the same database, they would all slow down anyway.
+
+So, I'm thinking, one thread for database access, one thread for UI and
+one thread dealing with the file system. And one thread for the
+simulation.
+
+This is a good time to mention, when I started this, I was considering
+using 40 thread. Yeah, 40! Maybe I still will: To handle the file system
+interactions.
+
+6:53 pm
+
+I'm back at home.
+
+Today was a very busy day at work. There was some betting. Someone bet
+his car that NPP would win the 2020 election. SMH.
+
+I was able to get some few codes in. I refactored the code I had, you
+know, after the drawing board. The current structure of the code, have
+the code in segments. And each the segment is on a thread. They
+communicate via signals and slots.
+
+I have 3 main segments. The UI, simulation and the database. Simulation
+is piece code to check how the app will handle updating the UI, if data
+is continuously sent to the database.
+
+- 3/12/2020
+
+12:27 pm
+
+My 3-segment approach looked promising until I run the code. It gave an
+error.
+
+\# problem
+
+The error was cause by SQL query on one thread, trying to use database
+on a different thread.
+
+This is good news because, finally I have the threads working like they
+are supposed to. And I check online how to deal with this issue. The
+solution was one connection per thread.
+
+As for why the multithreading approach failed the first time: I am
+certain is because, I made the classes static.
+
+If I had my git working, I would have simply referred you to a branch.
+Example:
+
+static class Files: QObject {
+
+// class implementation ...
+
+} Files;
+
+The idea was to push everything to different thread from the main. And
+have that one instance be accessed through-out the entire app. Like a
+singleton.
+
+But that didn't work. I don't know why for sure yet. But I think the
+reason it didn't work is the same reason I having a DB error now.
+
+You can use a QObject of one thread in a different thread without going
+through the signals and slots.
+
+My reasoning is, to create a class that just pops up DB connection using
+the thread-Id as the connection name. In Qt once you are connected to
+the database in a particular thread, you can simply execute queries (or
+access it) without connecting to the database every single time. So, if
+there is a need to have more than one database you need to qualify it.
+You do that by using a connection name, and the database name. You can
+go through the documentation to get acquainted. Documentation available
+at *https://doc.qt.io/qt-5/sql-connecting.html*
+
+6:13 pm
+
+- 4/12/2020
+
+10:13 am
+
+I'm starting a new project. With a different code structure. So instead
+of having the database accessed from multiple threads, we have it one
+and accessed in that one thread.
+
+And that would not be the UI thread. At the start of the program the
+data would be loaded to the DataManger and the end of the program data
+will be written back to the database.
+
+The data access in any thread throughout the live time of program will
+live in a QObject called the dataManager.
+
+Yesterday I discovered a cool Qt class. QThreadStorage. It is
+incredible. Check it out.
+
+- 5/12/2020
+
+5:06 pm
+
+I've restarted the project. So far so great. This is going great, but I
+can't get a handle on the code. It is growing incredibly complex and it
+is difficult to focus on everything. There are way too many branches and
+way too many things I’m focusing on at once.
+
+So, I am going to restart again. I'm not changing anything in code
+structure. Just going to build the code incrementally.
+
+5:54 pm
+
+I would like to take this opportunity to campaign for building codes in
+a modular manner; AKA divide and conquer.
+
+And not just separating the developing the concept from implementation.
+But also:
+
+-   Develop the concept in a modular manner.
+
+-   Implement the code in the modular manner.
+
+This way you can focus on only a small piece of the code at a time. It
+makes refactoring easy. It makes debugging easy, it makes restarting the
+module easy. Because, now you are not starting the entire code from
+scratch but just that piece of it.
+
+For my backend developers, if you haven't heard of micro-services you
+should look into it. It's incredible! Interesting!
+
+If you just want to explore micro-services, I recommend when you do so
+use the Go programming language.
+
+6:07 pm
+
+Another approach to implementing codes I've seen is doing so
+incrementally. That is, build the most basic feature, make sure it
+works. Then add another layer or feature, make sure it works and add
+another one and another one ... this way you can avoid feature creep. I
+got this idea from Stroustrup.
+
+In fact, the reason I had to restart today is feature creep. I want the
+code to do something and do it fast. And store it in a database, and UI
+and UX. And I'm building all of it at once and I finding it difficult to
+keep it all straight.
+
+10:09 pm
+
+I finished the code.
+
+It has a simple UI. Three threads. One for target building. Target
+building is what I call, going through folders and looking for corrupted
+files and subfolders. That is because files we worked on and folders
+will be scanned. They become the target information.
+
+Here, we are only interested in files that have the .lyli as its
+extension. The other thread is renaming files and the last thread, is
+the main thread and is the one with the UI.
+
+\# problem
+
+I'm having a problem. It appears as if some signals and slots are not
+working.
+
+- 7/12/2020
+
+7:38 pm
+
+I didn't really do any work today. I just rewrote some parts of the code
+to see if it would work. But it just not breaking my way.
+
+So, I've decided I will get a different version and Qt tomorrow and try
+this again. If this doesn't work. I'm going old school C++.
+
+No framework, nothing. Just me and the standard libraries. It would be
+incredible. The snake case naming conversion. Pointers. std::thread,
+cout &lt;&lt;, cerr &lt;&lt;, system(). I will even checkout the C++
+returning tuple from a function approach Komla just told me about.
+Hehehe it would be incredible.
+
+But really don't want to spend any more time on this project. I want to
+finish and be done with it ASAP.
+
+- 8/12/2020
+
+11:29 am
+
+People, we are back in business. I won't lie I was really disappointed
+in Qt for a minute there. I was seriously considering Golang for the job
+and all my hopes on beautiful GUI flashed before my eyes over the
+weekends.
+
+But I have installed newer version of Qt and uninstalled the old one.
+And things look promising.
+
+-   First off, I got some errors that the old one did show before.
+
+-   I set a custom font for some UI widgets, the old one wasn't showing
+    the custom fonts but this one is.
+
+So, fingers crossed. Hopefully, by end of day, I will be done.
+
+Something fun or something to ignore, whichever you choose you can't be
+wrong: 011404 09 130125 1903151805 01 04012005. If you can decode this.
+I will tell you about it. Email: ghuywithissues@gmail.com. Cyrus knows
+the key btw. Cyrus AKA Cyrusgooddays the musician.
+
+12:00 pm
+
+I'm looking at some outputs, it is incredible.
+
+12:42 pm
+
+I'm glad to announce after some few bug fixes the code is running. Now I
+have to create some test sandbox and make sure it works. What next is,
+add icon, check the UI, even though the thing is running in a different
+thread the UI is still freezing: I have to check that. And I make my big
+announcement to anyone who may be concerned that the app is useable.
+
+\# problem
+
+Components are in different threads but, UI is still freezing.
+
+3:14 pm
+
+Solved the UI freezing problem. Basically, I pile up the updates to UI
+and push them to UI at my own time. So, updates are pushed to UI in an
+interval of: 100ms (for now).
+
+The updates are just to show the user that the program is doing
+something. So, when it actually appears doesn't really count as long as
+it’s reasonable.
+
+5:08 pm
+
+Let me tell you guys about what the problem with the signals and slots.
+In the process of adjusting the code to work, I made some mistakes and
+lack some knowledge.
+
+For the type of objects, I was throwing around via signals and slots, I
+had to register it. I didn't know this and the signals and slots were
+not working. So: I re-wrote them in a different way. In doing so, I made
+more mistakes.
+
+Code for registering the type:
+
+// This was an example of the lines of code
+
+// I needed for everything to fall into place.
+
+qRegisterMetaType&lt;QVector&lt;FolderInfo&gt;&gt;("QVector&lt;FolderInfo&gt;");
+
+People, I want to take this opportunity to remember Abraham Lincoln. He
+said: if I had 10 hours to cut down a tree. I would spend 6 sharping my
+axe.
+
+Your axe is programming is your IDE and "What you know you don't know".
+Before you start make sure you get the best resources available to you
+and learn those things you know you don't know but you might need.
+
+I just came back home about an hour ago.
+
+I'm about to make an Icon for the app. At the office I started the
+process. I wrote .lyli on a piece of paper and took a picture. Now, I'm
+about to push the pic through an Icon maker app I downloaded via windows
+store.
+
+- 9/12/2020
+
+10:36 am
+
+So now I'm just doing touch ups and testing. It’s left to run test where
+it will actually rename some files.
+
+Next, I will add a cancel feature to allow the user to cancel the
+process after it started. And I will add a stacked widget to allow user
+to simply select scan, first side and on the second side, an input to
+supply a root directory. The second side will be the expert mode.
+
+11:17 am
+
+After a few tweaks, rename test went through.
+
+12:16 am
+
+Cancel feature added successfully.
+
+12:51 pm
+
+Expert mode and simple interface options have been provided. So, the
+user doesn't have to deal with the process of selecting folder if they
+don’t know exactly where to search. At the same time saving time for
+users who know exactly where to search.
+
+1:41 pm
+
+Scan feature implemented in the UI.
+
+2:39 pm
+
+\# problem
+
+Cancel is not working.
+
+9:19 pm
+
+The cancel is working and software is being packaged.
+
+I will finish up when I get the room, currently outside, under some
+trees on campus. I live in a school bungalow with uncle, his wife, and
+children. They are interesting cousins really. I love working and
+enjoying some cool breeze.
+
+I took a break earlier after the 2:39 pm log. And I took stroll with a
+lady. Pretty lady. Yes, developers can take strolls with ladies and have
+interesting conversation.
+
+Back to business, I the past I have used Inno setup to package my
+software in the past. Inno setup and a couple of others. But I will do
+some searches and see if there is a new kid on the block.
+
+- 16/12/2020
+
+11:17 am
+
+It's been some few days since I worked on this. The only thing left is
+telling if the task is finished.
+
+The entire thing is multithreading. There is no way to know for sure,
+because the code is not procedural, it is reactive. It waits in response
+to signals before it does work and when there is no work the QObjects
+are kept alive until an explicit exit or quit command is given.
+
+I have been thinking about this partially, and I thing I have an answer.
+The UI need to know when to tell the user the scan is finished.
+
+So, the approach I'm taking is, if the UI doesn't receive any signals in
+about 30sec, it would send out a signal like a flare, if the signal
+returns in due time, then the UI will know it is finished.
+
+/\*
+
+I had also considered, creating a stack and monitoring it for both
+signals sent and the function calls, if there were no signals, we would
+check the stack. Based on what we find we will determine if the program
+is still running a scan or not.
+
+I haven’t tried, It looks like the kind of thing that would end up of
+messy and dirty code.
+
+\*/
+
+- 21/12/2020
+
+Catch up (Everything I did between the last log and the next)
+
+I implemented the finish approach I described in the last my last log.
+
+I also went ahead to implement a wrapper around a QWidget that would
+provide property animation feature. The property I’m animating here is
+the background color.
+
+\# problem
+
+After this I experienced an unexplainable behavior in the code. It would
+start, display UI and shortly after just stop.
+
+There was no error. There were no pointers as to where I might start
+looking for a solution. I have been since toying with the code, and
+finally I decided to roll back to the last working version.
+
+I did the roll back yesterday. Since I'm not using git. I did the roll
+back by going through the code and deleting the last added features.
+
+After the roll back I also remove the dataManager from the app. The
+dataManager was supposed to manage the data going through the app.
+
+In the dataManager, the data is not stored at any point, just passed
+around from one function to the other. The dataManager gets the data
+when it slots are called in response to a signal. It will pass data
+through some function and send it back out by emitting some signals.
+
+\# problem
+
+After removing the dataManager, one of the signals and slots connection
+seems to be faulty. The signals are not going through.
+
+9:58 am
+
+Today, I will attempt a different approach to the whole thing: the focus
+here is how to know work is done. Work is done when all folders of
+interest have been scanned and all files of interest have been renamed.
+Folders of interest includes the folder provided and its subfolders.
+Files of interest includes any files ending with “.lyli”.
+
+1.  I don't want the member functions to pass around data; I want to
+    store it as a member variable that way they can access it. That way
+    we can point a function to work on member variable and still be
+    adding work to it in another function.
+
+-   Example: For the renamer, the list of files to be renamed will not
+    be passed to the function, it would be stored as a property (or
+    member variables).
+
+-   The advantage is if the list is empty =&gt; that the renamer is done
+    with its task. Or,
+
+-   An additional check would be added. So, if the additional check
+    passes, and the ranamer list is empty, then the ranamer is done with
+    its work.
+
+2\. For the finish checking, will be done using the approach enumerated
+above; or maybe with a few added twists.
+
+3\. To show the app is finished, we will display, the number of folders
+scanned, the number of files renamed, the text "scan completed". This
+would not be dumped on the screen all at once but it would be animated.
+As if it was being typed.
+
+4\. When the code starts the heartbeat animation will be slow. When it is
+scanning it would be faster, and when it is done scanning it would be
+even faster. But after scanning the speed will only increase for about
+3sec and it would return to slow.
+
+- 26/12/2020
+
+5:31 pm
+
+I’ve implemented point one above. That is, store the data as member and
+accessible to all member function, instead of passing from as arguments.
+
+Point two was to find a way to notify the UI that all work is completed.
+All work is completed means, folders have been scanned and files have
+been worked on. I found a better solution to point two. That is, only
+the file ranamer can tell when the all work is done.
+
+So, when folder scanner is done with its work, it would send a signal to
+the ranamer. Once the ranamer receives that signal and it finishes with
+its current work load, it would be done! And, there will be for sure no
+more incoming tasks; so, it would send an all-finished signal to the UI.
+Indicating that all work related to the scanning is completed.
+
+I haven't implemented point four. I implemented point 3 and took it out.
+
+Today, with my head in my hands, I'm sad to say, I would have to
+sacrifice the speed of the project for user experience. It is almost
+impossible to coordinate the work, that is, different workers over
+different threads while heavily using the signal and slots.
+
+Some signal seems not to be firing and it does make sense to give the
+customer an extremely fast program if he/she can tell what the program
+is doing.
+
+So, we do a little bit of procedural execution of the entire task here.
+When the folder scanner is called, it will scan the folder given and all
+of its subfolders. While scanning, it will compile a list of files to be
+worked on. Once it's done it will pass the list to the ranamer and the
+ranamer will do its do.
+
+- 3/01/2021
+
+5:23 pm
+
+Between the time I made my last entry and latest 28th I was done with
+the code and it was working. I also sent to Alex; it was his computer
+that was infected, and ultimately what brought me here. After I played
+around the UI a bit and lazy-ed around for most part till today.
+
+If I hadn't mention: I’ve been on break, actually the whole office was
+on break, from work since 23 of Dec 2020; and we are said to resume on
+the 7th of Jan 2021. I later found out that work actually resumes on
+4th, on the 4th. So, I missed work on the 4th.
+
+\# problem
+
+Today I got the git work. I was git kept failing to push to GitHub, and
+I was getting an error every time I tried; unfortunately, I cannot share
+the exact error. I didn’t write it down. The part I can remember is
+"curl hung up" or something similar. I thought maybe the files were too
+many or there were some files that cannot be written to GitHub. I only
+get the error when I am pushing to GitHub.
+
+\# Solution
+
+I removed git from the entire project and added it to the directory
+containing the source code and app resources. Viola, it worked.
+
+The new plan is to improve on the UI, create some other content on the
+app and push it all on a website and add ads to it. This way, I can
+generate some revenue. The new objective is:
+
+1.
+
+-   clean up the code. - done 12/01/2021
+
+-   comment the code - done 12/01/2021
+
+-   talk about some Qt topics related to the code - done 12/01/2021
+
+-   develop the topics - started 15/01/2021,
+
+-   improve the UI - done 3/01/2021
+
+-   add a sequential diagram if necessary
+
+-   story of how the app was built, we will call this one “How to edit
+    files.” – done error checking and editing 26/01/2021, -
+
+-   some issues that arose as I was writing the code and the solutions I
+    came across or the fixes I found.
+
+1.  -   Let Komla make me a site
+
+-   Get an AdSense account
+
+-   Connect the two
+
+-   Share the link on Quora, Stack Overflow (I think it’s time I make an
+    account there), LinkedIn, twitter, Facebook (only in forums that
+    counts not on my main timeline), IG sure if I can find a way that
+    this makes since for IG and any other platform I can find.
+
+- 01/01/2020
+
+10:43 pm
+
+As of two days ago, I had finished restructuring and commenting the
+code. Today I took some first run at "the QT related topic".
+
+I walked around and did some audio recording, next steps:
+
++ Go through the recording a make some points.
+
++ Transcribe the recording if necessary
+
++ Research missing fact.
+
++ Work on scenarios and constructs used to explain what you want to
+explain.
+
++ Find relevant resource and add them.
+
+Output here is a PowerPoint document and a video where I’m presenting
+using the PowerPoint document. If Komla doesn't get back me on the
+website, contact him again.

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stories on Lyli</title>
+    <link>https://lyli.website/story/</link>
+    <description>Recent content in Stories on Lyli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Feb 2021 08:34:50 +0000</lastBuildDate><atom:link href="https://lyli.website/story/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day 87</title>
+      <link>https://lyli.website/story/day-87/</link>
+      <pubDate>Thu, 25 Feb 2021 08:34:50 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-87/</guid>
+      <description>&lt;div class=&#34;story-time post-meta&#34;&gt;  8 : 34 am &lt;/div&gt;
+&lt;p&gt;Komla didn&amp;rsquo;t get back to me, I think he&amp;rsquo;s busy with work. I have to do the website myself. I really didn&amp;rsquo;t want to. I&amp;rsquo;ve been dragging my feet and doing it slowly.&lt;/p&gt;
+&lt;p&gt;Now I&amp;rsquo;ve got something. The site is live since 19th Feb 2021 but I&amp;rsquo;m still working on the content and the UI. I decide to use hugo static site builder. I&amp;rsquo;m using the PaperMod theme; and adding my own twist to the theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 48</title>
+      <link>https://lyli.website/story/day-48/</link>
+      <pubDate>Sun, 17 Jan 2021 22:43:02 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-48/</guid>
+      <description>&lt;div class=&#34;story-time post-meta&#34;&gt;  10 : 43 pm &lt;/div&gt;
+&lt;p&gt;As of two days ago, I had finished restructuring and commenting the code. Today I took some first run at &amp;ldquo;the Qt related topic&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;I walked around and did some audio recording. Next steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go through the recording a make some points.&lt;/li&gt;
+&lt;li&gt;Transcribe the recording if necessary&lt;/li&gt;
+&lt;li&gt;Research missing facts.&lt;/li&gt;
+&lt;li&gt;Work on scenarios and constructs to explain what you want to explain.&lt;/li&gt;
+&lt;li&gt;Find relevant resource and add them.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 34</title>
+      <link>https://lyli.website/story/day-34/</link>
+      <pubDate>Sun, 03 Jan 2021 17:01:49 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-34/</guid>
+      <description>&lt;div class=&#34;story-time post-meta&#34;&gt;  5 : 23 pm &lt;/div&gt;
+&lt;p&gt;Between the time I made my last entry and latest 28th I was done with the code and it was working. I also sent it to Alex; it was his computer that was infected, and, ultimately what brought me here to you. After, I played around the UI a bit and lazy-ed around for most part till today.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 27</title>
+      <link>https://lyli.website/story/day-27/</link>
+      <pubDate>Sat, 26 Dec 2020 17:31:39 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-27/</guid>
+      <description>&lt;div class=&#34;story-time post-meta&#34;&gt;  5 : 31 pm &lt;/div&gt;
+&lt;p&gt;I’ve implemented point one above. That is, store the data as member and accessible to all member function, instead of passing from as arguments.
+Point two was to find a way to notify the UI that all work is completed. All work is completed means, folders have been scanned and files have been worked on. I found a better solution to point two. That is, only the file ranamer can tell when the all work is done.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 22</title>
+      <link>https://lyli.website/story/day-22/</link>
+      <pubDate>Mon, 21 Dec 2020 21:38:21 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-22/</guid>
+      <description>Catch up (Everything I did between the last log and the next)
+I implemented the finish approach I described in the last my last log. 
+I also went ahead to implement a wrapper around a QWidget that would provide property animation feature. The property I’m animating here is the background color. 
+&lt;style&gt;
+    .story-problem {
+        padding: 15px;
+        margin: 15px auto;
+        background-color: rgba(145, 24, 24, 0.39);
+    }
+
+    .story-problem-title {
+        font-size: 2rem;
+         
+         
+         
+    }
+
+     
+         
+         
+         
+     
+&lt;/style&gt;
+
+&lt;div class=&#34;story-problem&#34;&gt;
+    &lt;div class=&#34;story-problem-title&#34;&gt;
+        Problem
+    &lt;/div&gt;
+    &lt;div class=&#34;story-problem-statement&#34;&gt;
+         After this I experienced an unexplainable behavior in the code. It would start, display UI and shortly after just stop. 
+    &lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 17</title>
+      <link>https://lyli.website/story/day-17/</link>
+      <pubDate>Wed, 16 Dec 2020 11:17:42 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-17/</guid>
+      <description>&lt;div class=&#34;story-time post-meta&#34;&gt;  11 : 17 am &lt;/div&gt;
+&lt;p&gt;It&amp;rsquo;s been some few days since I worked on this. The only thing left is telling if the task is finished.
+The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive. It waits in response to signals before it does work and when there is no work the QObjects are kept alive until an explicit exit or quit command is given.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 10</title>
+      <link>https://lyli.website/story/day-10/</link>
+      <pubDate>Wed, 09 Dec 2020 10:35:37 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-10/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;story-time post-meta&#34;&gt;  10 : 36 am &lt;/div&gt;
+&lt;p&gt;So now I&amp;rsquo;m just doing touch ups and testing. It’s left to run test where it will actually rename some files.&lt;br&gt;
+Next, I will add a cancel feature to allow the user to cancel the process after it started. And I will add a stacked widget to allow user to simply select scan, first side and on the second side, an input to supply a root directory. The second side will be the expert mode.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 9</title>
+      <link>https://lyli.website/story/day-9/</link>
+      <pubDate>Tue, 08 Dec 2020 11:29:51 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-9/</guid>
+      <description>11 : 29 am  People, we are back in business. I won&amp;rsquo;t lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed newer version of Qt and uninstalled the old one, now things are look promising.
+ First off, I got some errors that the old one did show before.</description>
+    </item>
+    
+    <item>
+      <title>Day 8</title>
+      <link>https://lyli.website/story/day-8/</link>
+      <pubDate>Mon, 07 Dec 2020 19:32:01 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-8/</guid>
+      <description>&lt;div class=&#34;story-time post-meta&#34;&gt;  7 : 38 pm &lt;/div&gt;
+&lt;p&gt;I didn&amp;rsquo;t really do any work today. I just refactored(reorganized and rearranged) some parts of the code to see if I can make more readable and keep it working. But it just not breaking my way. So, I&amp;rsquo;ve decided I will get a different version and Qt tomorrow and try this again. If this doesn&amp;rsquo;t work. I&amp;rsquo;m going old school C++.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 6</title>
+      <link>https://lyli.website/story/day-6/</link>
+      <pubDate>Sat, 05 Dec 2020 17:06:20 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-6/</guid>
+      <description>&lt;div class=&#34;story-time post-meta&#34;&gt;  5 : 06 pm &lt;/div&gt;
+&lt;p&gt;I&amp;rsquo;ve restarted the project. So far so great. This is going great, but I can&amp;rsquo;t get a handle on the code. It is growing incredibly complex and it is difficult to focus on everything. There are way too many branches and way too many things I’m focusing on at once. So, I am going to restart again. I&amp;rsquo;m not changing anything in code structure. Just going to build the code incrementally. One step at a time.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 5</title>
+      <link>https://lyli.website/story/day-5/</link>
+      <pubDate>Fri, 04 Dec 2020 10:13:04 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-5/</guid>
+      <description>&lt;div class=&#34;story-time post-meta&#34;&gt;  10 : 13 am &lt;/div&gt;
+&lt;p&gt;I&amp;rsquo;m starting a new project. With a different code structure. So instead of having the database accessed from multiple threads; we will have the database in one thread and only access it in that one thread.&lt;/p&gt;
+&lt;p&gt;A different thread will be created for the database. At the start of the program, the data would be loaded from the database to a DataManger. And, at the end of the program, data will be written back to the database.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 4</title>
+      <link>https://lyli.website/story/day-4/</link>
+      <pubDate>Thu, 03 Dec 2020 12:27:37 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-4/</guid>
+      <description>&lt;div class=&#34;story-time post-meta&#34;&gt;  12 : 27 pm &lt;/div&gt;
+&lt;p&gt;My 3-segment approach looked promising until I run the code. I got an error.&lt;/p&gt;
+&lt;style&gt;
+    .story-problem {
+        padding: 15px;
+        margin: 15px auto;
+        background-color: rgba(145, 24, 24, 0.39);
+    }
+
+    .story-problem-title {
+        font-size: 2rem;
+         
+         
+         
+    }
+
+     
+         
+         
+         
+     
+&lt;/style&gt;
+
+&lt;div class=&#34;story-problem&#34;&gt;
+    &lt;div class=&#34;story-problem-title&#34;&gt;
+        Problem
+    &lt;/div&gt;
+    &lt;div class=&#34;story-problem-statement&#34;&gt;
+         The error was cause by SQL query on one thread, trying to use database on a different thread. 
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This is good news. This is proof that the threads are working like they are supposed to. I check online: on how to deal with this error. The solution was one connection per thread. That&amp;rsquo;s the database and all communication with the database should be on one thread; or at least that&amp;rsquo;s how I understand it.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 3</title>
+      <link>https://lyli.website/story/day-3/</link>
+      <pubDate>Wed, 02 Dec 2020 08:23:13 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-3/</guid>
+      <description>&lt;div class=&#34;story-time post-meta&#34;&gt;  8 : 23 am &lt;/div&gt;
+&lt;p&gt;After my last entry yesterday, I started to doze off. I guess I was tired and I did even know it. I was really surprised. But I went to bed later in the evening. Today is a new day, hopefully no new errors :).&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m already at work.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 2</title>
+      <link>https://lyli.website/story/day-2/</link>
+      <pubDate>Tue, 01 Dec 2020 09:19:56 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-2/</guid>
+      <description>&lt;div class=&#34;story-time post-meta&#34;&gt;  9 : 19 am &lt;/div&gt;
+&lt;p&gt;I found the solution to the yesterdays error. All I had to do was interchange the order of some lines of code. Somethings need to happen before can happen others. A similar scenario in this case is: you need to have table in order to put a plate on a table.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Day 1</title>
+      <link>https://lyli.website/story/day-1/</link>
+      <pubDate>Mon, 30 Nov 2020 08:00:51 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-1/</guid>
+      <description>&lt;p&gt;To put this thing together I need a plan, and some tools. Just as constructor needs a drawing and some machines.&lt;/p&gt;
+&lt;p&gt;I have some ideas about how it going to like like in the end, how the database should be structure. The idea is not solid. It&amp;rsquo;s not definite but it can get me started. I will use SQLite as my database. I have some drawings of how the database should look like. I will programming C++ and I will be using Qt.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Intro</title>
+      <link>https://lyli.website/story/day-1-intro/</link>
+      <pubDate>Mon, 30 Nov 2020 07:36:51 +0000</pubDate>
+      
+      <guid>https://lyli.website/story/day-1-intro/</guid>
+      <description>&lt;p&gt;I was at work, a very busy day. I worked at the IT department of an examination company. The work was mostly fixing thing. We worked on laptops, desktops, printers&amp;hellip; . Sometimes we will put together about 5 laptops and network them together with a printer and one machine is setup to be the sever. We also handle walk-in problems related to softwares issued by the company.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
