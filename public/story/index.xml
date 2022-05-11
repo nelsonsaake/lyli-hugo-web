@@ -116,8 +116,12 @@ The entire thing is multithreading. There is no way to know for sure, because th
       <guid>https://lyli.website/story/day-10/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;story-time post-meta&#34;&gt;  10 : 36 am &lt;/div&gt;
-&lt;p&gt;So now I&amp;rsquo;m just doing touch ups and testing. It’s left to run test where it will actually rename some files.&lt;br&gt;
-Next, I will add a cancel feature to allow the user to cancel the process after it started. And I will add a stacked widget to allow user to simply select scan, first side and on the second side, an input to supply a root directory. The second side will be the expert mode.&lt;/p&gt;</description>
+&lt;p&gt;I finished the Icon from yesterday and added it to the program.&lt;/p&gt;
+&lt;p&gt;So now I&amp;rsquo;m just doing touch ups and testing. Now I have to run the program to test where if it will actually rename some files.  Next, I will add a cancel feature to allow the user to cancel the process after it had started. And then I will also add a two modes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;allow user to simply select scan to scan the entire computer,&lt;/li&gt;
+&lt;li&gt;or choose the a folder to scan. This option will be the expert mode.&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
     <item>
@@ -126,8 +130,8 @@ Next, I will add a cancel feature to allow the user to cancel the process after 
       <pubDate>Tue, 08 Dec 2020 11:29:51 +0000</pubDate>
       
       <guid>https://lyli.website/story/day-9/</guid>
-      <description>11 : 29 am  People, we are back in business. I won&amp;rsquo;t lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed newer version of Qt and uninstalled the old one, now things are look promising.
- First off, I got some errors that the old one did show before.</description>
+      <description>11 : 29 am  People, we are back in business. I won&amp;rsquo;t lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed a newer version of Qt and uninstalled the old one, now things are looking promising.
+ First off, I got some errors messages that the old one didn&amp;rsquo;t show.</description>
     </item>
     
     <item>

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
-
 .nav {
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +9,6 @@
     font-family: var(--font-family);
     letter-spacing: 2px;
     word-spacing: 15px;
-    /* background-color: var(--header-background); */
     border: 1px solid rgb(199, 199, 199);
     border-width: 0 0px 1px 0px;
 }

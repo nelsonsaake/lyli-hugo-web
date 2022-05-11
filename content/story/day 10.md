@@ -6,8 +6,11 @@ draft: false
 <!-- last stop -->
 {{< story/time "10" "36" "am" >}}
 
-So now I'm just doing touch ups and testing. It’s left to run test where it will actually rename some files.  
-Next, I will add a cancel feature to allow the user to cancel the process after it started. And I will add a stacked widget to allow user to simply select scan, first side and on the second side, an input to supply a root directory. The second side will be the expert mode.   <!--more-->
+I finished the Icon from yesterday and added it to the program.
+
+So now I'm just doing touch ups and testing. Now I have to run the program to test where if it will actually rename some files.  Next, I will add a cancel feature to allow the user to cancel the process after it had started. And then I will also add a two modes: 
+1. allow user to simply select scan to scan the entire computer, 
+2. or choose the a folder to scan. This option will be the expert mode.   <!--more-->
 
 {{< story/time "11" "17" "am" >}}
 
@@ -19,7 +22,7 @@ Cancel feature added successfully.
 
 {{< story/time "12" "51" "pm" >}}
 
-Expert mode and simple interface options have been provided. So, the user doesn't have to deal with the process of selecting folder if they don’t know exactly where to search. At the same time saving time for users who know exactly where to search. 
+Expert mode and simple options have been provided. So, the user doesn't have to deal with the process of selecting folder if they don’t know exactly where to search. At the same time saving time for users who know exactly where to search. 
 
 {{< story/time "1" "41" "pm" >}}
 

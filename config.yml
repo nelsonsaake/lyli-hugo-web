@@ -11,7 +11,7 @@ buildExpired: false
 params:
   homeInfoParams:
       Title: "Welcome to Lyli home page \U0001F44B"
-      Content: Click to [Download](https://drive.google.com/file/d/1O_OPeZcQjJI6gxcqdrfnZBLZzzloZCKV/view?usp=sharing) the latest release. The app finds and correct files corrupted by the **.lyli** virus. Check the **About** page for more information about the app and the virus. ![screenshot](/images/lyli-placed-in-desktop.png)
+      Content: Click to [Download](https://drive.google.com/file/d/1O_OPeZcQjJI6gxcqdrfnZBLZzzloZCKV/view?usp=sharing) the latest release. The app finds and correct files corrupted by the **.lyli** virus. Check the **About** page for more information about the app and the virus. ![screenshot](/images/screenshot.png)
                 
 menu:
     main:

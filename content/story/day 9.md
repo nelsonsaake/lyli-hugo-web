@@ -6,9 +6,9 @@ draft: false
 
 {{< story/time "11" "29" "am" >}}
 
-People, we are back in business. I won't lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed newer version of Qt and uninstalled the old one, now things are look promising.  
-+ First off, I got some errors that the old one did show before.
-+ I set a custom font for some UI widgets, the old one wasn't showing the custom fonts but this one is. 
+People, we are back in business. I won't lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed a newer version of Qt and uninstalled the old one, now things are looking promising.  
++ First off, I got some errors messages that the old one didn't show.
++ I was able to set a custom font for some UI widgets, the old one wasn't showing the custom fonts. 
 
 Over the last few days I was wrestling with some bugs(errors in my code). First, it was communicating with the database, then `signals` were not being handled properly. Then I tried refactoring the code to make it more readable: that too created some more problems, so I had to reverse the changes. Finally I was thinking about changing the version of Qt or using C++ or Golang.
 
