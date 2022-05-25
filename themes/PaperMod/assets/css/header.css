@@ -32,6 +32,12 @@
     font-weight: 100;
 }
 
+@media screen and (max-width: 480px) {
+    .logo a {
+        font-size: 19px;
+    }
+}
+
 .logo a img {
     display: inline;
     vertical-align: middle;
@@ -48,6 +54,12 @@
 button#theme-toggle {
     font-size: 31px;
     margin: auto 4px
+}
+
+@media screen and (max-width: 480px) {
+    button#theme-toggle {
+        font-size: 26px;
+    }
 }
 
 body.dark #moon {
@@ -75,6 +87,12 @@ body:not(.dark) #sun {
     margin: auto 10px;
 }
 
+@media screen and (max-width: 480px) {
+    #menu a  {
+        font-size: 16px;
+    }
+}
+
 #menu .active {
     font-weight: 500;
     border-bottom: 2px solid currentColor
@@ -96,6 +114,12 @@ body:not(.dark) #sun {
     margin: auto 3px;
     font-size: 21px;
     font-weight: 500;
+}
+
+@media screen and (max-width: 480px) {
+    .lang-switch a  {
+        font-size: 16px;
+    }
 }
 
 .logo-switches {

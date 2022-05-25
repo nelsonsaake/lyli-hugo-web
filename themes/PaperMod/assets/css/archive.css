@@ -3,6 +3,12 @@
     font-size: 21px
 }
 
+@media screen and (max-width: 480px) {
+    .archive-posts {
+        font-size: 17px;
+    }
+}
+
 .archive-year {
     margin-top: 40px
 }
@@ -41,4 +47,11 @@
 .archive-meta {
     color: var(--secondary);
     font-size: 19px
+}
+
+@media screen and (max-width: 480px) {
+    .archive-count,
+    .archive-meta {
+        font-size: 14px;
+    }
 }

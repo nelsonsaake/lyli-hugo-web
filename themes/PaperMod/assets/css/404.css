@@ -9,3 +9,10 @@
     font-size: 165px;
     font-weight: 700
 }
+
+
+@media screen and (max-width: 480px) {
+    .not-found {
+        font-size: 120px;
+    }
+}

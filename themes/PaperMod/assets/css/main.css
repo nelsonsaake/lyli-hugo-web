@@ -11,6 +11,13 @@
     font-size: 45px
 }
 
+
+@media screen and (max-width: 480px) {
+    .page-header h1  {
+        font-size: 40px;
+    }
+}
+
 .pagination {
     display: flex
 }
@@ -22,6 +29,12 @@
     background: var(--primary);
     border-radius: calc(36px / 2);
     padding: 0 16px
+}
+
+@media screen and (max-width: 480px) {
+    .pagination a  {
+        font-size: 13px;
+    }
 }
 
 .pagination .next {

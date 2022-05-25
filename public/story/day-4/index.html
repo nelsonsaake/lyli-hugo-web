@@ -23,7 +23,7 @@ My 3-segment approach looked promising until I run the code. I got an error.
 This is good news. This is proof that the threads are working like they are supposed to. I check online: on how to deal with this error. The solution was one connection per thread. That&rsquo;s the database and all communication with the database should be on one thread; or at least that&rsquo;s how I understand it.">
 <meta name="author" content="">
 <link rel="canonical" href="https://lyli.website/story/day-4/" />
-<link href="/assets/css/stylesheet.min.1fe5538e50481e145a246e241489d2a3f59c794a50c439c03168f5a3ad44e72e.css" integrity="sha256-H&#43;VTjlBIHhRaJG4kFInSo/WceUpQxDnAMWj1o61E5y4=" rel="preload stylesheet"
+<link href="/assets/css/stylesheet.min.3f0304495d619f7d80aa58fbfdc009bc6e4f0942427e1a4ea84d77aa42957f04.css" integrity="sha256-PwMESV1hn32Aqlj7/cAJvG5PCUJCfhpOqE13qkKVfwQ=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://lyli.website/favicon.ico">
@@ -97,12 +97,12 @@ This is good news. This is proof that the threads are working like they are supp
   "@type": "BlogPosting",
   "headline": "Day 4",
   "name": "Day 4",
-  "description": "12 : 27 pm  My 3-segment approach looked promising until I run the code. I got an error.\n\r.story-problem {\rpadding: 15px;\rmargin: 15px auto;\rbackground-color: rgba(145, 24, 24, …",
+  "description": "12 : 27 pm  My 3-segment approach looked promising until I run the code. I got an error.\n\r.story-problem {\rpadding: 15px;\rmargin: 15px auto;\rmargin-bottom: 50px;\rbackground-color: …",
   "keywords": [
     
   ],
-  "articleBody": "12 : 27 pm  My 3-segment approach looked promising until I run the code. I got an error.\n\r.story-problem {\rpadding: 15px;\rmargin: 15px auto;\rbackground-color: rgba(145, 24, 24, 0.39);\r}\r.story-problem-title {\rfont-size: 2rem;\r}\r\rProblem\r\rThe error was cause by SQL query on one thread, trying to use database on a different thread. \r This is good news. This is proof that the threads are working like they are supposed to. I check online: on how to deal with this error. The solution was one connection per thread. That’s the database and all communication with the database should be on one thread; or at least that’s how I understand it.\nAs for why the multithreading approach failed the first time: I am certain is because, I made the classes static. Static class means there can be one instance of that class. A class is like a blueprint of a house. An instance of the class is like a real-life house constructed based on the blueprint. Static class means only one house can be built using that blueprint. Example:\n When the application starts, it starts with one thread. This thread is called the main thread. Every work is done in this thread. So, imagine you have one lane and all the cars must use that lane. But in some places where a lot of people use cars, one lane won’t be enough. There will be traffic and the cars will slow down. It is the same for a computer program.\nKnowing that one lane can get really busy, we add more lanes. Similarly in a program, when a lot of work is being done on the main thread and it might slow done the program, you can add more threads. The errors I’m currently dealing with, is because I’m trying to share the work the program is doing on different threads.\nI created a thread for each component and let each component work in their own thread. The problem comes when components on different threads try to talk to each other. In this particular case a component on one thread is trying to send a query to the database on a different thread. I can’t figure out why this is an issue.\nI will look at the code again, maybe modify a bit and see what happens…\n« Prev Page Next Page » \r",
-  "wordCount" : "393",
+  "articleBody": "12 : 27 pm  My 3-segment approach looked promising until I run the code. I got an error.\n\r.story-problem {\rpadding: 15px;\rmargin: 15px auto;\rmargin-bottom: 50px;\rbackground-color: rgba(145, 24, 24, 0.39);\r}\r.story-problem-title {\rfont-size: 2rem;\r}\r\rProblem\r\rThe error was cause by SQL query on one thread, trying to use database on a different thread. \r This is good news. This is proof that the threads are working like they are supposed to. I check online: on how to deal with this error. The solution was one connection per thread. That’s the database and all communication with the database should be on one thread; or at least that’s how I understand it.\nAs for why the multithreading approach failed the first time: I am certain is because, I made the classes static. Static class means there can be one instance of that class. A class is like a blueprint of a house. An instance of the class is like a real-life house constructed based on the blueprint. Static class means only one house can be built using that blueprint. Example:\n When the application starts, it starts with one thread. This thread is called the main thread. Every work is done in this thread. So, imagine you have one lane and all the cars must use that lane. But in some places where a lot of people use cars, one lane won’t be enough. There will be traffic and the cars will slow down. It is the same for a computer program.\nKnowing that one lane can get really busy, we add more lanes. Similarly in a program, when a lot of work is being done on the main thread and it might slow done the program, you can add more threads. The errors I’m currently dealing with, is because I’m trying to share the work the program is doing on different threads.\nI created a thread for each component and let each component work in their own thread. The problem comes when components on different threads try to talk to each other. In this particular case a component on one thread is trying to send a query to the database on a different thread. I can’t figure out why this is an issue.\nI will look at the code again, maybe modify a bit and see what happens…\n« Prev Page Next Page » \r",
+  "wordCount" : "395",
   "inLanguage": "en",
   "datePublished": "2020-12-03T12:27:37Z",
   "dateModified": "2020-12-03T12:27:37Z",
@@ -200,6 +200,7 @@ This is good news. This is proof that the threads are working like they are supp
     .story-problem {
         padding: 15px;
         margin: 15px auto;
+        margin-bottom: 50px;
         background-color: rgba(145, 24, 24, 0.39);
     }
 

@@ -11,7 +11,8 @@
 :root {
     --gap: 24px;
     --content-gap: 50px;
-    --nav-width: 1024px;
+    /* --nav-width: 1024px; */
+    /* --nav-width: 100vw; */
     --main-width: 720px;
     --header-height: 60px;
     --footer-height: 60px;
@@ -27,6 +28,7 @@
     --border: #eee;
     --font-family: agency fb;
     --font-family: poppins;
+    --font-family: inconsolata;
 }
 
 .dark {
@@ -41,16 +43,3 @@
     --border: #333;
 }
 
-/* override for the purpose of using the background image*/
-:root,
-.dark {
-    --theme: #1d1e20;
-    --entry: #2e2e3354;
-    --primary: rgb(255, 255, 255);
-    --secondary: rgb(226, 226, 226);
-    --tertiary: rgb(218, 218, 218);
-    --content: rgba(255, 255, 255, 0.74);
-    --hljs-bg: #2e2e33;
-    --code-bg: #37383e;
-    --border: #333;
-}

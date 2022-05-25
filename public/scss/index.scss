@@ -1,0 +1,92 @@
+@import "config";
+@import "fonts";
+@import "header_footer";
+@import "feature-image";
+
+body {
+    font-family: 'inconsolata';
+    font-family: 'agencyb';
+}
+
+.section {
+    padding: 5rem;
+
+    &:nth-child(odd) {
+        background-color: $gray;
+    }
+
+    &:nth-child(even) {
+        background-color: white;
+    }
+
+    p {
+        font-size: 2rem;
+        margin: 2.5rem auto;
+        text-align: justify;
+        color: $font-color;
+    }
+
+    h1 {
+        font-size: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    .read-more {
+        font-size: 2.3rem;
+        font-weight: bold;
+    }
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: $dark;
+    margin: auto auto;
+    border: 0;
+
+    & a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.6rem;
+    }
+}
+
+@include media-md {
+
+    .section {
+        padding: 5rem 2rem;
+
+        p {
+            font-size: 1.3rem;
+            margin: 2.5rem auto;
+            text-align: left;
+            line-height: 2;
+            color: $font-color;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .read-more {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+
+    .btn {
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: $dark;
+        margin: auto auto;
+        border: 0;
+
+        & a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+    }
+
+}

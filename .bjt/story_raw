@@ -591,7 +591,7 @@ Files of interest includes any files ending with “.lyli”.
     with its task. Or,
 
 -   An additional check would be added. So, if the additional check
-    passes, and the ranamer list is empty, then the ranamer is done with
+    passes, and the renamer list is empty, then the renamer is done with
     its work.
 
 2\. For the finish checking, will be done using the approach enumerated
@@ -617,10 +617,10 @@ accessible to all member function, instead of passing from as arguments.
 Point two was to find a way to notify the UI that all work is completed.
 All work is completed means, folders have been scanned and files have
 been worked on. I found a better solution to point two. That is, only
-the file ranamer can tell when the all work is done.
+the file renamer can tell when the all work is done.
 
 So, when folder scanner is done with its work, it would send a signal to
-the ranamer. Once the ranamer receives that signal and it finishes with
+the renamer. Once the renamer receives that signal and it finishes with
 its current work load, it would be done! And, there will be for sure no
 more incoming tasks; so, it would send an all-finished signal to the UI.
 Indicating that all work related to the scanning is completed.
@@ -639,8 +639,8 @@ is doing.
 So, we do a little bit of procedural execution of the entire task here.
 When the folder scanner is called, it will scan the folder given and all
 of its subfolders. While scanning, it will compile a list of files to be
-worked on. Once it's done it will pass the list to the ranamer and the
-ranamer will do its do.
+worked on. Once it's done it will pass the list to the renamer and the
+renamer will do its do.
 
 - 3/01/2021
 

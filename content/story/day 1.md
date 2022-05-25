@@ -9,7 +9,7 @@ To put this thing together I need a plan, and some tools. Just as constructor ne
 I have some ideas about how it going to like like in the end, how the database should be structure. The idea is not solid. It's not definite but it can get me started. I will use SQLite as my database. I have some drawings of how the database should look like. I will programming C++ and I will be using Qt.  <!--more-->
 
 
-SQLite because it's small and suit my needs, C++ and Qt because I want to build a program for a computer that has GUI.GUI is that part of the program with buttons, colors, picture, animations,...and basically anything you can interact with. 
+SQLite because it's small and suit my needs, C++ and Qt because I want to build a program for a computer that has GUI.GUI is that part of the program with buttons, colors, picture, animations and basically anything you can interact with. 
 
 I actually started thinking about how I was going to go about it since Wednesday. I also watched some videos on SQLite and Qt, and read a bit about C++ multithreading (doing many thing in a program at once).
 

@@ -6,7 +6,7 @@ draft: false
 
 {{< story/time "11" "29" "am" >}}
 
-People, we are back in business. I won't lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed a newer version of Qt and uninstalled the old one, now things are looking promising.  
+People, we are back in business. I won't lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed a newer version of Qt and uninstalled the old one, now things are looking promising. <!--more-->
 + First off, I got some errors messages that the old one didn't show.
 + I was able to set a custom font for some UI widgets, the old one wasn't showing the custom fonts. 
 

@@ -8,9 +8,9 @@ draft: false
 
 As of two days ago, I had finished restructuring and commenting the code. Today I took some first run at "the Qt related topic". 
 
-I walked around and did some audio recording. Next steps:
+I walked around and did some audio recording. Next:
 + Go through the recording a make some points.
-+ Transcribe the recording if necessary
++ Transcribe the recording if necessary.
 + Research missing facts.
 + Work on scenarios and constructs to explain what you want to explain.
 + Find relevant resource and add them.  <!--more-->

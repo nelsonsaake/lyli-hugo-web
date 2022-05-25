@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://lyli.website/story/" />
-<link href="/assets/css/stylesheet.min.1fe5538e50481e145a246e241489d2a3f59c794a50c439c03168f5a3ad44e72e.css" integrity="sha256-H&#43;VTjlBIHhRaJG4kFInSo/WceUpQxDnAMWj1o61E5y4=" rel="preload stylesheet"
+<link href="/assets/css/stylesheet.min.3f0304495d619f7d80aa58fbfdc009bc6e4f0942427e1a4ea84d77aa42957f04.css" integrity="sha256-PwMESV1hn32Aqlj7/cAJvG5PCUJCfhpOqE13qkKVfwQ=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://lyli.website/favicon.ico">
@@ -128,8 +128,8 @@
   <section class="entry-content">
     
     <p><div class="story-time post-meta">  11 : 17 am </div>
-<p>It&rsquo;s been some few days since I worked on this. The only thing left is telling if the task is finished.
-The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive. It waits in response to signals before it does work and when there is no work the QObjects are kept alive until an explicit exit or quit command is given.</p>...</p>
+<p>It&rsquo;s been some few days since I worked on this. The only thing left is telling if the program is finished.
+The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive and event-driven.</p>...</p>
   </section>
   <footer class="entry-footer">December 16, 2020
 </footer>
@@ -145,13 +145,15 @@ The entire thing is multithreading. There is no way to know for sure, because th
   </header>
   <section class="entry-content">
     
-    <p>Catch up (Everything I did between the last log and the next)
-I implemented the finish approach I described in the last my last log. 
-I also went ahead to implement a wrapper around a QWidget that would provide property animation feature. The property I’m animating here is the background color. 
+    <p><!-- raw HTML omitted -->
+<h2 id="catch-up-everything-i-did-between-the-last-log-and-the-next">Catch up (Everything I did between the last log and the next)</h2>
+<p>I implemented the <code>finish</code> approach I described in the last my last log. I also went ahead to implement a wrapper around a QWidget that would provide property animation feature. The property I’m animating here is the background color.</p>
+<!-- raw HTML omitted -->
 <style>
     .story-problem {
         padding: 15px;
         margin: 15px auto;
+        margin-bottom: 50px;
         background-color: rgba(145, 24, 24, 0.39);
     }
 
@@ -192,9 +194,12 @@ I also went ahead to implement a wrapper around a QWidget that would provide pro
   </header>
   <section class="entry-content">
     
-    <p><div class="story-time post-meta">  5 : 31 pm </div>
-<p>I’ve implemented point one above. That is, store the data as member and accessible to all member function, instead of passing from as arguments.
-Point two was to find a way to notify the UI that all work is completed. All work is completed means, folders have been scanned and files have been worked on. I found a better solution to point two. That is, only the file ranamer can tell when the all work is done.</p>...</p>
+    <p><!-- raw HTML omitted -->
+<div class="story-time post-meta">  5 : 31 pm </div>
+<h2 id="point-one">Point One</h2>
+<p>I’ve implemented point one from my last entry. That is, store the data as member variables instead of passing as arguments.</p>
+<h1 id="point-two">Point Two</h1>
+<p>Point two was to find a way to know when work is completed. All work is completed means, folders have been searched(scanned) and files have been renamed. That&rsquo;s my main focus now.</p>...</p>
   </section>
   <footer class="entry-footer">December 26, 2020
 </footer>
@@ -229,10 +234,10 @@ Point two was to find a way to notify the UI that all work is completed. All wor
     
     <p><div class="story-time post-meta">  10 : 43 pm </div>
 <p>As of two days ago, I had finished restructuring and commenting the code. Today I took some first run at &ldquo;the Qt related topic&rdquo;.</p>
-<p>I walked around and did some audio recording. Next steps:</p>
+<p>I walked around and did some audio recording. Next:</p>
 <ul>
 <li>Go through the recording a make some points.</li>
-<li>Transcribe the recording if necessary</li>
+<li>Transcribe the recording if necessary.</li>
 <li>Research missing facts.</li>
 <li>Work on scenarios and constructs to explain what you want to explain.</li>
 <li>Find relevant resource and add them.</li>
@@ -253,8 +258,8 @@ Point two was to find a way to notify the UI that all work is completed. All wor
   <section class="entry-content">
     
     <p><div class="story-time post-meta">  8 : 34 am </div>
-<p>Komla didn&rsquo;t get back to me, I think he&rsquo;s busy with work. I have to do the website myself. I really didn&rsquo;t want to. I&rsquo;ve been dragging my feet and doing it slowly.</p>
-<p>Now I&rsquo;ve got something. The site is live since 19th Feb 2021 but I&rsquo;m still working on the content and the UI. I decide to use hugo static site builder. I&rsquo;m using the PaperMod theme; and adding my own twist to the theme.</p>...</p>
+<p>Komla didn&rsquo;t get back to me, I think he&rsquo;s busy with work. So, I had to do the website myself. I really didn&rsquo;t want to and I&rsquo;ve been dragging my feet. Slowly I&rsquo;ve started something.</p>
+<p>Now I&rsquo;ve got something. The site is live, it has been since 19th Feb 2021 but I&rsquo;m still working on the content and the UI, just going over it. I decide to use Hugo static site builder. I&rsquo;m using the PaperMod theme; and adding my own twist to the theme.</p>...</p>
   </section>
   <footer class="entry-footer">February 25, 2021
 </footer>

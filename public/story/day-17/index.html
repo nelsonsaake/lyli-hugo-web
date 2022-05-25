@@ -9,11 +9,11 @@
 
 <meta name="keywords" content="" />
 <meta name="description" content="  11 : 17 am 
-It&rsquo;s been some few days since I worked on this. The only thing left is telling if the task is finished.
-The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive. It waits in response to signals before it does work and when there is no work the QObjects are kept alive until an explicit exit or quit command is given.">
+It&rsquo;s been some few days since I worked on this. The only thing left is telling if the program is finished.
+The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive and event-driven.">
 <meta name="author" content="">
 <link rel="canonical" href="https://lyli.website/story/day-17/" />
-<link href="/assets/css/stylesheet.min.1fe5538e50481e145a246e241489d2a3f59c794a50c439c03168f5a3ad44e72e.css" integrity="sha256-H&#43;VTjlBIHhRaJG4kFInSo/WceUpQxDnAMWj1o61E5y4=" rel="preload stylesheet"
+<link href="/assets/css/stylesheet.min.3f0304495d619f7d80aa58fbfdc009bc6e4f0942427e1a4ea84d77aa42957f04.css" integrity="sha256-PwMESV1hn32Aqlj7/cAJvG5PCUJCfhpOqE13qkKVfwQ=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://lyli.website/favicon.ico">
@@ -28,8 +28,8 @@ The entire thing is multithreading. There is no way to know for sure, because th
 
 <meta property="og:title" content="Day 17" />
 <meta property="og:description" content="  11 : 17 am 
-It&rsquo;s been some few days since I worked on this. The only thing left is telling if the task is finished.
-The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive. It waits in response to signals before it does work and when there is no work the QObjects are kept alive until an explicit exit or quit command is given." />
+It&rsquo;s been some few days since I worked on this. The only thing left is telling if the program is finished.
+The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive and event-driven." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyli.website/story/day-17/" />
 <meta property="article:published_time" content="2020-12-16T11:17:42+00:00" />
@@ -37,8 +37,8 @@ The entire thing is multithreading. There is no way to know for sure, because th
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Day 17"/>
 <meta name="twitter:description" content="  11 : 17 am 
-It&rsquo;s been some few days since I worked on this. The only thing left is telling if the task is finished.
-The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive. It waits in response to signals before it does work and when there is no work the QObjects are kept alive until an explicit exit or quit command is given."/>
+It&rsquo;s been some few days since I worked on this. The only thing left is telling if the program is finished.
+The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive and event-driven."/>
 
 
 <script type="application/ld+json">
@@ -67,12 +67,12 @@ The entire thing is multithreading. There is no way to know for sure, because th
   "@type": "BlogPosting",
   "headline": "Day 17",
   "name": "Day 17",
-  "description": "11 : 17 am  It\u0026amp;rsquo;s been some few days since I worked on this. The only thing left is telling if the task is finished. The entire thing is multithreading. There is no way to …",
+  "description": "11 : 17 am  It\u0026amp;rsquo;s been some few days since I worked on this. The only thing left is telling if the program is finished. The entire thing is multithreading. There is no way to …",
   "keywords": [
     
   ],
-  "articleBody": "11 : 17 am  It’s been some few days since I worked on this. The only thing left is telling if the task is finished. The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive. It waits in response to signals before it does work and when there is no work the QObjects are kept alive until an explicit exit or quit command is given.\nI have been thinking about this partially, and I thing I have an answer. The UI need to know when to tell the user the scan is finished. So, the approach I’m taking is, if the UI doesn’t receive any signals in about 30sec, it would send out a signal like a flare, if the signal returns in due time, then the UI will know it is finished.\n « Prev Page Next Page » ",
-  "wordCount" : "151",
+  "articleBody": "11 : 17 am  It’s been some few days since I worked on this. The only thing left is telling if the program is finished. The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive and event-driven.\nThe components(QObjects) are kept alive, the threads are kept alive until explicit exit or quit command is given. The components only do work when a signal is sent. For example: the Renamer will only rename a file after a signal with the filename is received.\nThis of it as boats at a river bank. They are always there to ferry passengers, their work is never done because, they don’t know when the next passenger will arrive. Their work is never done because they can’t tell which passenger is the last passenger.\nThat’s the problem, I’m trying come up with a way of telling when the work is done so that all the components stop work. The way a normal program works is: it start follow the instruction to do some work then it stops. This is wait for everybody to finish before it stops. Or it can tell everybody to stop so it can stop. The problem is the component don’t know when the work will be finish so they will never stop. What I trying to do is find out when to tell them to stop, so the program or some part of the program can stop. This is also important to know when the work is finished so when alert the user that work is finished.\nOver the last few day I have been thinking about this, and I think I have an answer. The UI need to know when to tell the user the scan is finished.\nSo, the approach I’m taking about is, if the UI doesn’t receive any signals in about 30sec, it would send out a signal like a flare, if the signal returns in due time, then the UI will know it is finished. I can’t explain it any further because myself, I don’t fully understand yet.\n « Prev Page Next Page » ",
+  "wordCount" : "359",
   "inLanguage": "en",
   "datePublished": "2020-12-16T11:17:42Z",
   "dateModified": "2020-12-16T11:17:42Z",
@@ -165,10 +165,13 @@ The entire thing is multithreading. There is no way to know for sure, because th
 
   <div class="post-content">
 <div class="story-time post-meta">  11 : 17 am </div>
-<p>It&rsquo;s been some few days since I worked on this. The only thing left is telling if the task is finished.
-The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive. It waits in response to signals before it does work and when there is no work the QObjects are kept alive until an explicit exit or quit command is given.</p>
-<p>I have been thinking about this partially, and I thing I have an answer. The UI need to know when to tell the user the scan is finished.
-So, the approach I&rsquo;m taking is, if the UI doesn&rsquo;t receive any signals in about 30sec, it would send out a signal like a flare, if the signal returns in due time, then the UI will know it is finished.</p>
+<p>It&rsquo;s been some few days since I worked on this. The only thing left is telling if the program is finished.
+The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive and event-driven.</p>
+<p>The components(QObjects) are kept alive, the threads are kept alive until explicit exit or quit command is given. The components only do work when a signal is sent. For example: the <code>Renamer</code> will only rename a file after a signal with the filename is received.</p>
+<p>This of it as boats at a river bank. They are always there to ferry passengers, their work is never done because, they don&rsquo;t know when the next passenger will arrive. Their work is never done because they can&rsquo;t tell which passenger is the last passenger.</p>
+<p>That&rsquo;s the problem, I&rsquo;m trying come up with a way of telling when the work is done so that all the components stop work. The way a normal program works is: it start follow the instruction to do some work then it stops. This is wait for everybody to finish before it stops. Or it can tell everybody to stop so it can stop. The problem is the component don&rsquo;t know when the work will be finish so they will never stop. What I trying to do is find out when to tell them to stop, so the program or some part of the program can stop. This is also important to know when the work is finished so when alert the user that work is finished.</p>
+<p>Over the last few day I have been thinking about this, and I think I have an answer. The UI need to know when to tell the user the scan is finished.</p>
+<p>So, the approach I&rsquo;m taking about is, if the UI doesn&rsquo;t receive any signals in about 30sec, it would send out a signal like a flare, if the signal returns in due time, then the UI will know it is finished. I can&rsquo;t explain it any further because myself, I don&rsquo;t fully understand yet.</p>
 <script type="application/javascript" src="https://gist.github.com/nelsonsaake/31b645a58cdf525f4cdc868e3471651a.js"></script>
 
 
