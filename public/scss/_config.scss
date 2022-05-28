@@ -1,13 +1,19 @@
 $dark: #262626;
 $darker: #0d0d0d;
-$gray: #e6e6e6;
+$gray: #e7e7e7;
+$red: #AB2E2E;
 $font-color: #505050;
-
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+@mixin media-xs {
+    @media screen and (max-width: 375px) {
+        @content;
+    }
 }
 
 @mixin media-sm {

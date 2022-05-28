@@ -3,51 +3,67 @@
 @import "header_footer";
 @import "feature-image";
 
-body {
+body,
+button>a {
     font-family: 'inconsolata';
     font-family: 'agencyb';
+    font-family: 'papyrus';
 }
 
 .section {
     padding: 5rem;
 
+    .section-content {
+        max-width: 1000px;
+        margin: auto;
+    }
+
     &:nth-child(odd) {
-        background-color: $gray;
+        background-color: white;
     }
 
     &:nth-child(even) {
-        background-color: white;
+        background-color: $gray;
+        color: $dark;
     }
 
     p {
         font-size: 2rem;
         margin: 2.5rem auto;
-        text-align: justify;
         color: $font-color;
     }
 
     h1 {
+        color: $red;
+        font-family: 'rift';
         font-size: 5rem;
+        font-weight: 200;
         margin-bottom: 2rem;
+        word-spacing: 0.6rem;
+        letter-spacing: 0.6rem;
     }
 
     .read-more {
         font-size: 2.3rem;
         font-weight: bold;
+        color: $red;
     }
 }
 
 .btn {
     padding: 1rem 2rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     background-color: $dark;
-    margin: auto auto;
+    max-width: 440px;
+    background: $red;
+    text-align: center;
     border: 0;
 
     & a {
         color: white;
         text-decoration: none;
         font-size: 1.6rem;
+        text-align: center;
     }
 }
 
@@ -57,20 +73,18 @@ body {
         padding: 5rem 2rem;
 
         p {
-            font-size: 1.3rem;
-            margin: 2.5rem auto;
-            text-align: left;
+            font-size: 1.5rem;
             line-height: 2;
-            color: $font-color;
         }
 
         h1 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
+            font-size: 3rem;
+            word-spacing: 0.3rem;
+            letter-spacing: 0.3rem;
         }
 
         .read-more {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: bold;
         }
     }
@@ -78,15 +92,53 @@ body {
     .btn {
         padding: 1rem;
         border-radius: 8px;
-        background-color: $dark;
-        margin: auto auto;
-        border: 0;
 
         & a {
-            color: white;
-            text-decoration: none;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@include media-sm {
+
+    .section {
+        padding: 5rem 2rem;
+
+        p {
+            font-size: 1.5rem;
+            line-height: 2;
+        }
+
+        h1 {
+            font-size: 3rem;
+            word-spacing: 0rem;
+            letter-spacing: 0rem;
+        }
+    }
+}
+
+@include media-xs{
+
+    .section {
+        padding: 5rem 1rem;
+
+        p {
+            font-size: 1.5rem;
+            line-height: 2;
+        }
+
+        h1 {
+            font-size: 3rem;
+            word-spacing: 0rem;
+            letter-spacing: 0rem;
+        }
+        
+    .btn {
+        padding: 1rem;
+
+        & a {
             font-size: 1rem;
         }
     }
-
+    }
 }
