@@ -4,11 +4,11 @@ date: 2021-02-10T08:00:05Z
 draft: false
 ---
 
-# THE VIRUS
+## THE VIRUS
 
 There is a virus that changes the first 150kb according to [this site](); and adds **.lyli** to the name of the files it corrupts. 
 
-# THE APP
+## THE APP
 
 What comes after the last dot "." in the name of the file, tells the computer what kind of file it is; and what softwares can open or play the file. 
 
@@ -18,10 +18,14 @@ That is what the current version of this app does: rename affected files removin
 
 Remember I mentioned the virus also changes what is in the file? After correcting the file-names: some files may still not open. Some file will be partially useful and for some, it would be as if no harm was done. 
 
-{{< about/example >}}
-If a pdf was corrupted by the virus and the name was corrected. The first page might not show, but everything else will be show.
-{{< /about/example >}}
+---
 
-## note
+### Example
+
+If a pdf was corrupted by the virus and the name was corrected. The first page might not show, but everything else will show.
+
+---
+
+## Note
 
 The current version of the app corrects the name of affected files. It **DOES NOT** reverse the damage done to the content of the file. Something is better than nothing right?

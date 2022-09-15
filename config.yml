@@ -1,7 +1,7 @@
 baseURL: https://lyli.website/
 languageCode: en-us
 title: Lyli
-theme: PaperMod
+theme: 'hugo-tranquilpeak-theme'
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -23,3 +23,18 @@ menu:
           name: Story
           url: /story/
           weight: 30
+
+outputFormats:
+  JSON:
+    permalinkable: true
+
+outputs:
+  home:
+  - HTML
+  - JSON
+  page:
+  - HTML
+  - JSON  
+  section:
+  - HTML
+  - JSON

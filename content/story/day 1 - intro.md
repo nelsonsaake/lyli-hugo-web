@@ -4,7 +4,7 @@ date: 2020-11-30T07:36:51Z
 draft: false
 ---
 
-I was at work, a very busy day. I worked at the IT department of an examination company. The work was mostly fixing thing. We worked on laptops, desktops, printers... Sometimes we will put together about 5 laptops and network them together with a printer and one machine is setup to be the sever. We also handle walk-in problems related to software programs issued by the company. <!--more-->
+I was at work, a very busy day. I worked at the IT department of an examination company. The work was mostly fixing things. We worked on laptops, desktops, printers... Sometimes we will put together about 5 laptops and network them together with a printer and one machine is setup to be the sever. We also handle walk-in problems related to software programs issued by the company. <!--more-->
 
 One day at work, I got to work on a Laptop. It was old, had a few cracks and scratches but it was steady. It was one of those laptops that had a place for CDs. We call the thing that takes the CD, the `CD ROM Drives`. This laptop's CD ROM Drive was loose. It could easy fall out if you're not careful. The laptop was small about 14ichs.
 
@@ -20,4 +20,4 @@ Recall I mentioned, the virus also changes things in the file? This program can'
 
 This story is my entry as try to build the program.
 
-{{< story/nav next="day-1" >}}
+<!-- {{< story/nav next="day-1" >}} -->

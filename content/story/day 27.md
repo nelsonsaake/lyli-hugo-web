@@ -6,7 +6,8 @@ draft: false
 
 <!-- last stop -->
 
-{{< story/time "5" "31" "pm" >}}
+<!-- {{< story/time "5" "31" "pm" >}} -->
+## 5:31pm
 
 ## Point One
 I’ve implemented point one from my last entry. That is, store the data as member variables instead of passing as arguments. 
@@ -33,4 +34,4 @@ So, we do a little bit of sequential execution of the entire task(finding and re
 
 Instead having them working at the same time like an assembly line, we wait for one component to finish completely before the next work start work.
 
-{{< story/nav prev="day-22" next="day-34" >}}
+<!-- {{< story/nav prev="day-22" next="day-34" >}} -->

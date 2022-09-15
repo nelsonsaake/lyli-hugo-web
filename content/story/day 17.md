@@ -4,7 +4,8 @@ date: 2020-12-16T11:17:42Z
 draft: false
 ---
 
-{{< story/time "11" "17" "am" >}}
+<!-- {{< story/time "11" "17" "am" >}} -->
+## 11:17am
 
 It's been some few days since I worked on this. The only thing left is telling if the program is finished. 
 The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive and event-driven. <!--more-->
@@ -21,4 +22,4 @@ So, the approach I'm taking about is, if the UI doesn't receive any signals in a
 
 {{< gist nelsonsaake "31b645a58cdf525f4cdc868e3471651a">}}
 
-{{< story/nav prev="day-10" next="day-22" >}}
+<!-- {{< story/nav prev="day-10" next="day-22" >}} -->

@@ -4,7 +4,8 @@ date: 2020-12-09T10:35:37Z
 draft: false
 ---
 
-{{< story/time "10" "36" "am" >}}
+<!-- {{< story/time "10" "36" "am" >}} -->
+## 10:36am
 
 I finished the Icon from yesterday and added it to the program.
 
@@ -12,27 +13,41 @@ So now I'm just doing touch ups and testing. Now I have to run the program to te
 + Allow user to simply select scan to scan the entire computer, 
 + Or choose the a folder to scan. This option will be the expert mode.   <!--more-->
 
-{{< story/time "11" "17" "am" >}}
+<!-- {{< story/time "11" "17" "am" >}} -->
+## 11:17am
 
 After a few tweaks, rename test went through. 
 
-{{< story/time "12" "16" "pm" >}}
+<!-- {{< story/time "12" "16" "pm" >}} -->
+## 12:16pm
 
 Cancel feature added successfully. 
 
-{{< story/time "12" "51" "pm" >}}
+<!-- {{< story/time "12" "51" "pm" >}} -->
+## 12:51pm
 
 Expert mode and simple options have been provided. So, the user doesn't have to deal with the process of selecting folder if they don’t know exactly where to search. At the same time saving time for users who know exactly where to search. 
 
 <!-- {{< story/time "1" "41" "pm" >}}
+## 1:41pm
 
 Scan feature implemented in the UI.   -->
 
-{{< story/time "2" "39" "pm" >}}
+<!-- {{< story/time "2" "39" "pm" >}} -->
+## 2:39pm
 
-{{< story/problem >}} Cancel is not working. {{< /story/problem >}}
+<!-- {{< story/problem >}}  -->
+---
 
-{{< story/time "9" "19" "pm" >}}
+### Problem
+
+Cancel is not working. 
+
+<!-- {{< /story/problem >}} -->
+---
+
+<!-- {{< story/time "9" "19" "pm" >}} -->
+## 9:19pm
 
 The cancel is now working and software is being packaged. 
 
@@ -44,4 +59,4 @@ Back to business, I the past I have used `Inno setup` when I want to package a s
 
 The output of programming is usually a group of files and folders that needs to be managed together. During installing on a computer all those files must be installed together and when the user wants to un-install a program all those files and folders must be remove among other things. `Inno setup` and programs like it, take of things like this so developers don't have to unless they want to.
 
-{{< story/nav prev="day-9" next="day-17" >}}
+<!-- {{< story/nav prev="day-9" next="day-17" >}} -->

@@ -1,0 +1,17 @@
+{
+    "title":"{{ .Title }}",
+    "isHome":"{{ .IsHome }}",
+    "pages": [
+        {{range $index, $page := .Pages.Reverse}}
+            {
+                "title": {{.Page.Title | jsonify}},
+                "link": {{.Page.Permalink | jsonify}},
+                "summary": {{.Page.Summary | plainify | htmlUnescape | jsonify}},
+                "back":  {{with .Prev}} {{.Permalink | jsonify}} {{else}} "" {{end}},
+                "next": {{with .Next}} {{.Permalink | jsonify}} {{else}} "" {{end}}
+            },
+        {{end}}
+        {}
+    ]
+}
+

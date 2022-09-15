@@ -4,7 +4,8 @@ date: 2021-01-17T22:43:02Z
 draft: false
 ---
 
-{{< story/time "10" "43" "pm" >}}
+<!-- {{< story/time "10" "43" "pm" >}} -->
+## 10:43pm
 
 As of two days ago, I had finished restructuring and commenting the code. Today I took some first run at "the Qt related topic". 
 
@@ -19,4 +20,4 @@ Output here is PowerPoint documents and a video where I’m presenting using the
 
 If Komla doesn't get back me on the website, I will contact him again.
 
-{{< story/nav prev="day-34" next="day-87" >}}
+<!-- {{< story/nav prev="day-34" next="day-87" >}} -->

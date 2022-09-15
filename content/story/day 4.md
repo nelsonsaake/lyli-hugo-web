@@ -4,11 +4,20 @@ date: 2020-12-03T12:27:37Z
 draft: false
 ---
 
-{{< story/time "12" "27" "pm" >}}
+<!-- {{< story/time "12" "27" "pm" >}} -->
+## 12:27pm
 
 My 3-segment approach looked promising until I run the code. I got an error. 
 
-{{< story/problem >}} The error was cause by SQL query on one thread, trying to use database on a different thread. {{< /story/problem >}} 
+<!-- {{< story/problem >}}  -->
+---
+
+### Problem
+
+The error was cause by SQL query on one thread, trying to use database on a different thread. 
+
+<!-- {{< /story/problem >}}  -->
+---
 
 This is good news. This is proof that the threads are working like they are supposed to. I check online: on how to deal with this error. The solution was one connection per thread. That's the database and all communication with the database should be on one thread; or at least that's how I understand it.  <!--more--> 
 
@@ -24,7 +33,7 @@ I created a thread for each component and let each component work in their own t
 
 I will look at the code again, maybe modify a bit and see what happens...
 
-{{< story/nav prev="day-3" next="day-5" >}}
+<!-- {{< story/nav prev="day-3" next="day-5" >}} -->
 
 <!-- You can use a QObject of one thread in a different thread without going through the signals and slots.  -->
 

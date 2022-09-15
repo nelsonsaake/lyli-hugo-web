@@ -1,0 +1,6 @@
+{
+    "title": "{{.Title}}",
+    "content": {{.RawContent | jsonify}},
+    "back":  {{with .Prev}} {{.Permalink | jsonify}} {{else}} "" {{end}},
+    "next": {{with .Next}} {{.Permalink | jsonify}} {{else}} "" {{end}}
+}

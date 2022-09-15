@@ -1,0 +1,137 @@
+{
+    "title":"Stories",
+    "isHome":"false",
+    "pages": [
+        
+            {
+                "title": "Intro",
+                "link": "https://lyli.website/story/day-1-intro/index.json",
+                "summary": "I was at work, a very busy day. I worked at the IT department of an examination company. The work was mostly fixing things. We worked on laptops, desktops, printers… Sometimes we will put together about 5 laptops and network them together with a printer and one machine is setup to be the sever. We also handle walk-in problems related to software programs issued by the company.\n",
+                "back":   "" ,
+                "next":  "https://lyli.website/story/day-1/index.json" 
+            },
+        
+            {
+                "title": "Day 1",
+                "link": "https://lyli.website/story/day-1/index.json",
+                "summary": "To put this thing together I need a plan, and some tools. Just as constructor needs a drawing and some machines.\nI have some ideas about how it going to like like in the end, how the database should be structure. The idea is not solid. It’s not definite but it can get me started. I will use SQLite as my database. I have some drawings of how the database should look like. I will programming C++ and I will be using Qt.\n",
+                "back":   "https://lyli.website/story/day-1-intro/index.json" ,
+                "next":  "https://lyli.website/story/day-2/index.json" 
+            },
+        
+            {
+                "title": "Day 2",
+                "link": "https://lyli.website/story/day-2/index.json",
+                "summary": "9:19am I found the solution to the yesterdays error. All I had to do was interchange the order of some lines of code. Somethings need to happen before can happen others. A similar scenario in this case is: you need to have table in order to put a plate on a table.\n",
+                "back":   "https://lyli.website/story/day-1/index.json" ,
+                "next":  "https://lyli.website/story/day-3/index.json" 
+            },
+        
+            {
+                "title": "Day 3",
+                "link": "https://lyli.website/story/day-3/index.json",
+                "summary": "8:23am After my last entry yesterday, I started to doze off. I guess I was tired and I did even know it. I was really surprised. But I went to bed later in the evening. Today is a new day, hopefully no new errors :).\nI’m already at work.\n",
+                "back":   "https://lyli.website/story/day-2/index.json" ,
+                "next":  "https://lyli.website/story/day-4/index.json" 
+            },
+        
+            {
+                "title": "Day 4",
+                "link": "https://lyli.website/story/day-4/index.json",
+                "summary": "12:27pm My 3-segment approach looked promising until I run the code. I got an error.\n This is good news. This is proof that the threads are working like they are supposed to. I check online: on how to deal with this error. The solution was one connection per thread. That’s the database and all communication with the database should be on one thread; or at least that’s how I understand it.\n",
+                "back":   "https://lyli.website/story/day-3/index.json" ,
+                "next":  "https://lyli.website/story/day-5/index.json" 
+            },
+        
+            {
+                "title": "Day 5",
+                "link": "https://lyli.website/story/day-5/index.json",
+                "summary": "10:13am I’m starting a new project. With a different code structure. So instead of having the database accessed from multiple threads; we will have the database in one thread and only access it in that one thread.\nA different thread will be created for the database. At the start of the program, the data would be loaded from the database to a DataManger. And, at the end of the program, data will be written back to the database.\n",
+                "back":   "https://lyli.website/story/day-4/index.json" ,
+                "next":  "https://lyli.website/story/day-6/index.json" 
+            },
+        
+            {
+                "title": "Day 6",
+                "link": "https://lyli.website/story/day-6/index.json",
+                "summary": "5:06pm I’ve restarted the project. So far so great. This is going great, but I can’t get a handle on the code. It is growing incredibly complex and it is difficult to focus on everything. There are way too many branches and way too many things I’m focusing on at once. So, I am going to restart again. I’m not changing anything in code structure. Just going to build the code incrementally. One step at a time.\n",
+                "back":   "https://lyli.website/story/day-5/index.json" ,
+                "next":  "https://lyli.website/story/day-8/index.json" 
+            },
+        
+            {
+                "title": "Day 8",
+                "link": "https://lyli.website/story/day-8/index.json",
+                "summary": "7:38pm I didn’t really do any work today. I just refactored(reorganized and rearranged) some parts of the code to see if I can make more readable and keep it working. But it just not breaking my way. So, I’ve decided I will get a different version and Qt tomorrow and try this again. If this doesn’t work. I’m going old school C++.\n",
+                "back":   "https://lyli.website/story/day-6/index.json" ,
+                "next":  "https://lyli.website/story/day-9/index.json" 
+            },
+        
+            {
+                "title": "Day 9",
+                "link": "https://lyli.website/story/day-9/index.json",
+                "summary": "11:29am People, we are back in business. I won’t lie I was really disappointed in Qt for a minute there. I was seriously considering Golang for the job and all my hopes of beautiful GUI flashed before my eyes over the weekend. But I have installed a newer version of Qt and uninstalled the old one, now things are looking promising.\n",
+                "back":   "https://lyli.website/story/day-8/index.json" ,
+                "next":  "https://lyli.website/story/day-10/index.json" 
+            },
+        
+            {
+                "title": "Day 10",
+                "link": "https://lyli.website/story/day-10/index.json",
+                "summary": "10:36am I finished the Icon from yesterday and added it to the program.\nSo now I’m just doing touch ups and testing. Now I have to run the program to test if it will actually rename some files. Next, I will add a cancel feature to allow the user to cancel the process after it had started. And then I will also add a two modes:\n Allow user to simply select scan to scan the entire computer, Or choose the a folder to scan. This option will be the expert mode. ",
+                "back":   "https://lyli.website/story/day-9/index.json" ,
+                "next":  "https://lyli.website/story/day-17/index.json" 
+            },
+        
+            {
+                "title": "Day 17",
+                "link": "https://lyli.website/story/day-17/index.json",
+                "summary": "11:17am It’s been some few days since I worked on this. The only thing left is telling if the program is finished. The entire thing is multithreading. There is no way to know for sure, because the code is not procedural, it is reactive and event-driven.\n",
+                "back":   "https://lyli.website/story/day-10/index.json" ,
+                "next":  "https://lyli.website/story/day-22/index.json" 
+            },
+        
+            {
+                "title": "Day 22",
+                "link": "https://lyli.website/story/day-22/index.json",
+                "summary": "Catch up (Everything I did between the last log and the next) I implemented the finish approach I described in the last my last log. I also went ahead to implement a wrapper around a QWidget that would provide property animation feature. The property I’m animating here is the background color.\n",
+                "back":   "https://lyli.website/story/day-17/index.json" ,
+                "next":  "https://lyli.website/story/day-27/index.json" 
+            },
+        
+            {
+                "title": "Day 27",
+                "link": "https://lyli.website/story/day-27/index.json",
+                "summary": "5:31pm Point One I’ve implemented point one from my last entry. That is, store the data as member variables instead of passing as arguments.\nPoint Two Point two was to find a way to know when work is completed. All work is completed means, folders have been searched(scanned) and files have been renamed. That’s my main focus now.\n",
+                "back":   "https://lyli.website/story/day-22/index.json" ,
+                "next":  "https://lyli.website/story/day-34/index.json" 
+            },
+        
+            {
+                "title": "Day 34",
+                "link": "https://lyli.website/story/day-34/index.json",
+                "summary": "5:23pm Between the time I made my last entry and latest 28th I was done with the code and it was working. I also sent it to Alex; it was his computer that was infected, and, ultimately what brought me here to you. After, I played around the UI a bit and lazy-ed around for most part till today.\n",
+                "back":   "https://lyli.website/story/day-27/index.json" ,
+                "next":  "https://lyli.website/story/day-48/index.json" 
+            },
+        
+            {
+                "title": "Day 48",
+                "link": "https://lyli.website/story/day-48/index.json",
+                "summary": "10:43pm As of two days ago, I had finished restructuring and commenting the code. Today I took some first run at “the Qt related topic”.\nI walked around and did some audio recording. Next:\n Go through the recording a make some points. Transcribe the recording if necessary. Research missing facts. Work on scenarios and constructs to explain what you want to explain. Find relevant resource and add them. ",
+                "back":   "https://lyli.website/story/day-34/index.json" ,
+                "next":  "https://lyli.website/about/index.json" 
+            },
+        
+            {
+                "title": "Day 87",
+                "link": "https://lyli.website/story/day-87/index.json",
+                "summary": "8:34pm Komla didn’t get back to me, I think he’s busy with work. So, I had to do the website myself. I really didn’t want to and I’ve been dragging my feet. Slowly I’ve started something.\nNow I’ve got something. The site is live, it has been since 19th Feb 2021 but I’m still working on the content and the UI, just going over it. I decide to use Hugo static site builder. I’m using the PaperMod theme; and adding my own twist to the theme.\n",
+                "back":   "https://lyli.website/about/index.json" ,
+                "next":  "" 
+            },
+        
+        {}
+    ]
+}
+

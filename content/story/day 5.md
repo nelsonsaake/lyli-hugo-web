@@ -4,7 +4,8 @@ date: 2020-12-04T10:13:04Z
 draft: false
 ---
 
-{{< story/time "10" "13" "am" >}} 
+<!-- {{< story/time "10" "13" "am" >}}  -->
+## 10:13am
 
 I'm starting a new project. With a different code structure. So instead of having the database accessed from multiple threads; we will have the database in one thread and only access it in that one thread.
 
@@ -14,4 +15,4 @@ A different thread will be created for the database. At the start of the program
 
 **FYI:** Yesterday I discovered a cool Qt class. QThreadStorage. It is incredible. 
 
-{{< story/nav prev="day-4" next="day-6" >}}
+<!-- {{< story/nav prev="day-4" next="day-6" >}} -->

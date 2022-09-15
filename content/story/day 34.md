@@ -4,15 +4,32 @@ date: 2021-01-03T17:01:49Z
 draft: false
 ---
 
-{{< story/time "5" "23" "pm" >}}
+<!-- {{< story/time "5" "23" "pm" >}} -->
+## 5:23pm
 
 Between the time I made my last entry and latest 28th I was done with the code and it was working. I also sent it to Alex; it was his computer that was infected, and, ultimately what brought me here to you. After, I played around the UI a bit and lazy-ed around for most part till today.   <!--more-->
 
 If I hadn't mention: I’ve been on break. Actually the whole office was on break, since 23rd of December 2020 to resume on the 7th of Jan 2021. I later found out that work actually resumes on 4th, on the 4th. So, I missed work on the 4th.  
 
-{{< story/problem >}} Today I got the git to work. It kept failing to push to GitHub, and I was getting an error every time I tried; unfortunately, I cannot share the exact error. I didn’t write it down or save it. The part I can remember is "curl hung up" or something similar. I thought maybe the files were too many or there were some files that cannot be written to GitHub. I only get the error when I am pushing to GitHub. {{< /story/problem >}}
+<!-- {{< story/problem >}} -->
+---
 
-{{< story/solution >}} I removed git from the entire project and added it to the directory containing the source code and the application resources. Viola, it worked. {{< /story/solution >}}
+### Problem
+
+Today I got the git to work. It kept failing to push to GitHub, and I was getting an error every time I tried; unfortunately, I cannot share the exact error. I didn’t write it down or save it. The part I can remember is "curl hung up" or something similar. I thought maybe the files were too many or there were some files that cannot be written to GitHub. I only get the error when I am pushing to GitHub. 
+ 
+<!-- {{< /story/problem >}} -->
+---
+
+<!-- {{< story/solution >}}  -->
+---
+
+### Solution
+
+I removed git from the entire project and added it to the directory containing the source code and the application resources. Viola, it worked. 
+
+<!-- {{< /story/solution >}} -->
+---
 
 The new plan is to improve on the UI, create some other content relevant to the app and push it all on a website and add Ads to it. This way, I can generate some revenue. The new plan:
 
@@ -34,4 +51,4 @@ The new plan is to improve on the UI, create some other content relevant to the 
    + Facebook(only in forums that counts not on my main timeline), IG sure if I can find a way that this makes sense for IG and any other platform I can find.
 
 
-{{< story/nav prev="day-27" next="day-48" >}}
+<!-- {{< story/nav prev="day-27" next="day-48" >}} -->

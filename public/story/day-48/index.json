@@ -1,0 +1,6 @@
+{
+    "title": "Day 48",
+    "content": "\r\n\u003c!-- {{\u003c story/time \"10\" \"43\" \"pm\" \u003e}} --\u003e\r\n## 10:43pm\r\n\r\nAs of two days ago, I had finished restructuring and commenting the code. Today I took some first run at \"the Qt related topic\". \r\n\r\nI walked around and did some audio recording. Next:\r\n+ Go through the recording a make some points.\r\n+ Transcribe the recording if necessary.\r\n+ Research missing facts.\r\n+ Work on scenarios and constructs to explain what you want to explain.\r\n+ Find relevant resource and add them.  \u003c!--more--\u003e\r\n\r\nOutput here is PowerPoint documents and a video where I’m presenting using the PowerPoint document.\r\n\r\nIf Komla doesn't get back me on the website, I will contact him again.\r\n\r\n\u003c!-- {{\u003c story/nav prev=\"day-34\" next=\"day-87\" \u003e}} --\u003e\r\n",
+    "back":   "https://lyli.website/story/day-34/index.json" ,
+    "next":  "https://lyli.website/about/index.json" 
+}

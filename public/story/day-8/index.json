@@ -1,0 +1,6 @@
+{
+    "title": "Day 8",
+    "content": "\r\n\u003c!-- {{\u003c story/time \"7\" \"38\" \"pm\" \u003e}} --\u003e\r\n## 7:38pm\r\n\r\nI didn't really do any work today. I just refactored(reorganized and rearranged) some parts of the code to see if I can make more readable and keep it working. But it just not breaking my way. So, I've decided I will get a different version and Qt tomorrow and try this again. If this doesn't work. I'm going old school C++. \u003c!--more--\u003e \r\n\r\nNo framework, nothing. Just me and the standard libraries. It would be incredible. The snake case naming conversion, Pointers, std::thread, cout \u003c\u003c, cerr \u003c\u003c, system(). I will even checkout the C++ returning tuple from a function approach Komla just told me about. Hehehe it would be incredible. \r\n\r\nBut I really don't want to spend any more time on this project. I want to finish and be done with it ASAP. \r\n\r\n\u003c!-- {{\u003c story/nav prev=\"day-6\" next=\"day-9\" \u003e}} --\u003e\r\n",
+    "back":   "https://lyli.website/story/day-6/index.json" ,
+    "next":  "https://lyli.website/story/day-9/index.json" 
+}
